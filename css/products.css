@@ -1,0 +1,13 @@
+.product-row { display: grid; gap: 2.5rem; align-items: center; margin-bottom: 4rem; }
+@media (min-width: 820px) {
+  .product-row { grid-template-columns: 1fr 1fr; }
+  .product-row--reverse .product-row__text { order: 2; }
+  .product-row--reverse .product-row__media { order: 1; }
+}
+.product-row__media img {
+  width: 100%;
+  height: auto;          /* override the img height attribute so aspect-ratio drives height */
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}

@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Career | Plumbing Solutions</title>
+  <meta name="description" content="Join Plumbing Solutions — health insurance, national holidays, paid vacation, and uniforms provided. Apply online for plumber and apprentice positions in Trinidad &amp; Tobago.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+  <link rel="stylesheet" href="/css/base.css?v=1">
+  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header data-include="/partials/nav.html"></header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero__content">
+        <p class="eyebrow">Careers</p>
+        <h1 class="page-hero__title">Join a Crew That's Been at This Since 1997</h1>
+        <p class="page-hero__lead">We're always looking for experienced plumbers and
+          apprentices ready to join a 65+ strong team across Trinidad &amp; Tobago.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-2" style="align-items:start;">
+        <div>
+          <p class="eyebrow">Why Work Here</p>
+          <h2>Benefits</h2>
+          <div class="divider"></div>
+          <div class="grid-2" style="gap:1.25rem;">
+            <div class="card-bracket"><h4>Sagicor Health Insurance</h4></div>
+            <div class="card-bracket"><h4>National Holidays</h4></div>
+            <div class="card-bracket"><h4>Paid Vacation</h4></div>
+            <div class="card-bracket"><h4>Uniforms Provided</h4></div>
+          </div>
+
+          <p class="eyebrow" style="margin-top:3rem;">What You'll Need</p>
+          <h2>Employment Conditions</h2>
+          <div class="divider"></div>
+          <ul style="display:flex; flex-direction:column; gap:0.75rem;">
+            <li>Active Republic Bank account</li>
+            <li>Up-to-date immunization</li>
+            <li>Own basic tools, including hack blades</li>
+          </ul>
+        </div>
+
+        <picture style="display:block;">
+          <source type="image/avif" srcset="/assets/optimized/career-fleet-1600.avif 1600w, /assets/optimized/career-fleet-800.avif 800w" sizes="(max-width: 768px) 100vw, 45vw">
+          <source type="image/webp" srcset="/assets/optimized/career-fleet-1600.webp 1600w, /assets/optimized/career-fleet-800.webp 800w" sizes="(max-width: 768px) 100vw, 45vw">
+          <img src="/assets/optimized/career-fleet-1600.jpg" alt="Plumbing Solutions crew and service fleet — placeholder photography" width="1600" height="1067" loading="lazy" decoding="async" style="border-radius:var(--radius-md);">
+        </picture>
+      </div>
+    </section>
+
+    <!-- ─────────── APPLICATION FORM ─────────── -->
+    <section id="apply" class="section section--dark">
+      <div class="container">
+        <div id="career-success" class="banner banner--success" style="display:none; margin-bottom:2rem;">
+          Thank you — your application has been received. We'll be in touch if there's a fit.
+        </div>
+
+        <p class="eyebrow">Apply Now</p>
+        <h2>Employment Application</h2>
+        <div class="divider"></div>
+
+        <form name="career-application" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/career.html?success=1" class="career__form" novalidate style="max-width: 760px; margin-top: 2rem;">
+          <input type="hidden" name="form-name" value="career-application">
+          <p class="form-honey">
+            <label>Don't fill this out if you're human: <input name="bot-field"></label>
+          </p>
+
+          <fieldset>
+            <legend>Position</legend>
+            <div class="form-row form-row--2">
+              <div class="form-group">
+                <label for="position">Position Applying For</label>
+                <select id="position" name="position">
+                  <option>Licensed Plumber</option>
+                  <option>Plumber's Assistant</option>
+                  <option>Apprentice</option>
+                  <option>Maintenance Technician</option>
+                  <option>Office / Administrative</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="expectedSalary">Expected Salary (TTD, monthly)</label>
+                <input id="expectedSalary" name="expectedSalary" type="text" placeholder="e.g. $6,000">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Personal Information</legend>
+            <div class="form-row form-row--2">
+              <div class="form-group">
+                <label for="firstName">First Name <span style="color:var(--copper);">*</span></label>
+                <input id="firstName" name="firstName" type="text" required autocomplete="given-name">
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name <span style="color:var(--copper);">*</span></label>
+                <input id="lastName" name="lastName" type="text" required autocomplete="family-name">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="address">Home Address <span style="color:var(--copper);">*</span></label>
+              <input id="address" name="address" type="text" required autocomplete="street-address">
+            </div>
+
+            <div class="form-row form-row--2">
+              <div class="form-group">
+                <label for="phone">Phone Number <span style="color:var(--copper);">*</span></label>
+                <input id="phone" name="phone" type="tel" required autocomplete="tel">
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input id="email" name="email" type="email" autocomplete="email">
+              </div>
+            </div>
+
+            <div class="form-row form-row--3">
+              <div class="form-group">
+                <label for="age">Age</label>
+                <input id="age" name="age" type="number" min="16" max="80">
+              </div>
+              <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input id="dob" name="dob" type="date">
+              </div>
+              <div class="form-group">
+                <label for="idType">ID Type</label>
+                <select id="idType" name="idType">
+                  <option>National ID</option>
+                  <option>Passport</option>
+                  <option>Driver's Permit</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Gender</label>
+              <div class="radio-group">
+                <label class="radio-option"><input type="radio" name="gender" value="Male"> Male</label>
+                <label class="radio-option"><input type="radio" name="gender" value="Female"> Female</label>
+                <label class="radio-option"><input type="radio" name="gender" value="Prefer not to say"> Prefer not to say</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Do you hold a valid Driver's Permit?</label>
+              <div class="radio-group">
+                <label class="radio-option"><input type="radio" name="driversPermit" value="Yes"> Yes</label>
+                <label class="radio-option"><input type="radio" name="driversPermit" value="No"> No</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Experience</legend>
+            <div class="form-group">
+              <label for="experience">Plumbing Experience</label>
+              <textarea id="experience" name="experience" placeholder="Years of experience, past employers, specialties (pumps, drains, sewer, etc.)"></textarea>
+            </div>
+            <div class="form-row form-row--2">
+              <div class="form-group">
+                <label for="reference1">Reference 1 (Name &amp; Contact)</label>
+                <input id="reference1" name="reference1" type="text">
+              </div>
+              <div class="form-group">
+                <label for="reference2">Reference 2 (Name &amp; Contact)</label>
+                <input id="reference2" name="reference2" type="text">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="startDate">Available Start Date</label>
+              <input id="startDate" name="startDate" type="date">
+            </div>
+          </fieldset>
+
+          <div class="form-submit">
+            <button type="submit" class="btn btn-copper">Submit Application</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer data-include="/partials/footer.html"></footer>
+  <script>
+    (function () {
+      if (new URLSearchParams(location.search).get('success') === '1') {
+        var b = document.getElementById('career-success');
+        if (b) {
+          b.style.display = 'block';
+          b.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+    })();
+  </script>
+  <script src="/js/main.js?v=1" defer></script>
+</body>
+</html>
