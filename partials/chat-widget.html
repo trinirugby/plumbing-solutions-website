@@ -1,0 +1,36 @@
+<div class="chat-widget">
+  <button id="chat-toggle" class="chat-toggle" aria-label="Open chat with Piper" type="button">
+    <svg class="chat-toggle__icon chat-toggle__icon--open" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M4 4h16a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H8l-5 4V5a1 1 0 0 1 1-1z" fill="currentColor"/>
+    </svg>
+    <svg class="chat-toggle__icon chat-toggle__icon--close" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+    </svg>
+  </button>
+
+  <div id="chat-window" class="chat-window" role="dialog" aria-label="Chat with Piper">
+    <div class="chat-header">
+      <div class="chat-header__avatar" aria-hidden="true">P</div>
+      <div class="chat-header__meta">
+        <p class="chat-header__name">Piper</p>
+        <p class="chat-header__status">Plumbing Solutions &middot; here to help</p>
+      </div>
+    </div>
+
+    <div id="chat-messages" class="chat-messages">
+      <div class="chat-msg bot">
+        <div class="chat-bubble">Hi, I&rsquo;m Piper &mdash; the assistant for Plumbing Solutions.
+          Ask me about our services, hours, or how to schedule a plumber. For emergencies,
+          call <strong>(868) 280-6295</strong>.</div>
+      </div>
+    </div>
+
+    <form class="chat-input-row" id="chat-form" onsubmit="return false;">
+      <input id="chat-input" class="chat-input" type="text" autocomplete="off"
+             placeholder="Type your question&hellip;" aria-label="Type your message">
+      <button id="chat-send" class="chat-send" type="button" aria-label="Send message">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l18-8-8 18-2-7-8-3z" fill="currentColor"/></svg>
+      </button>
+    </form>
+  </div>
+</div>
