@@ -6,6 +6,9 @@
     "dev": "npx --yes serve@latest .",
     "optimize": "node scripts/optimize-images.mjs"
   },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.70.0"
+  },
   "devDependencies": {
     "sharp": "^0.33.5"
   }
