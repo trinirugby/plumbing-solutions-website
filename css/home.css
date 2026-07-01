@@ -1,0 +1,103 @@
+/* ---------- Home hero ---------- */
+.hero {
+  position: relative;
+  background: var(--ink);
+  color: var(--white);
+  overflow: hidden;
+  padding-block: clamp(4rem, 8vw, 6rem) clamp(3rem, 6vw, 4.5rem);
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.055) 1px, transparent 1px);
+  background-size: 44px 44px;
+  pointer-events: none;
+}
+.hero__grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .hero__grid { grid-template-columns: 1.15fr 0.85fr; }
+}
+.hero__eyebrow { color: var(--brass); }
+.hero__title { color: var(--white); margin-bottom: 1.1rem; }
+.hero__lead { color: var(--steel-200); font-size: 1.125rem; max-width: 52ch; }
+.hero__actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; margin-bottom: 2.75rem; }
+.hero__gauge-wrap { display: flex; justify-content: center; }
+
+/* ---------- CTA tiles ---------- */
+.tiles { margin-top: -3.5rem; position: relative; z-index: 2; }
+.tile {
+  background: var(--white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--steel-200);
+  display: flex;
+  flex-direction: column;
+}
+.tile__img-wrap { aspect-ratio: 4 / 3; overflow: hidden; }
+.tile__img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+.tile__body { padding: 1.5rem 1.6rem 1.75rem; }
+.tile__label { font-family: var(--font-mono); font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--copper-dark); margin-bottom: 0.5rem; }
+.tile__body h3 { margin-bottom: 0.6rem; }
+.tile__body p { font-size: 0.9375rem; margin-bottom: 1.1rem; }
+
+/* ---------- Mission band (photo + overlay) ---------- */
+.mission-band {
+  position: relative;
+  background: linear-gradient(120deg, rgba(15,32,39,0.94), rgba(15,32,39,0.78)), url("/assets/optimized/home-hero-1600.jpg");
+  background-size: cover;
+  background-position: center 30%;
+  color: var(--white);
+}
+.mission-band__content { max-width: 700px; }
+.mission-band blockquote {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 3vw, 2.125rem);
+  text-transform: none;
+  letter-spacing: 0;
+  line-height: 1.3;
+  margin: 0 0 1.5rem;
+  color: var(--white);
+}
+.mission-band cite { font-family: var(--font-mono); font-size: 0.8125rem; letter-spacing: 0.05em; color: var(--brass); font-style: normal; }
+
+/* ---------- Sanitization strip ---------- */
+.sanitization-strip {
+  background: var(--steel-100);
+  border-top: 1px solid var(--steel-200);
+  border-bottom: 1px solid var(--steel-200);
+}
+.sanitization-strip__inner { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem 2.5rem; justify-content: space-between; }
+.sanitization-strip h4 { margin-bottom: 0.3rem; }
+.sanitization-strip p { font-size: 0.9375rem; margin: 0; max-width: 56ch; }
+
+/* ---------- Brand + membership strip ---------- */
+.brand-strip__title, .membership-strip__title {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--steel-500);
+  margin-bottom: 1.25rem;
+}
+.membership-strip { margin-top: 2.5rem; }
+
+/* ---------- Final CTA ---------- */
+.final-cta__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.final-cta__actions { display: flex; flex-wrap: wrap; gap: 1rem; }

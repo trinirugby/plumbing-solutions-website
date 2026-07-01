@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Plumbing Solutions</title>
+  <meta name="description" content="Reach Plumbing Solutions at #41 Mucurapo Road, St. James, Trinidad — office (868) 628-4646/4648, 24/7 emergency hotline (868) 280-6295, or send an enquiry.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+  <link rel="stylesheet" href="/css/base.css?v=1">
+  <link rel="stylesheet" href="/css/contact.css?v=1">
+  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header data-include="/partials/nav.html"></header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero__content">
+        <p class="eyebrow">Get In Touch</p>
+        <h1 class="page-hero__title">Schedule a Plumber or Send an Enquiry</h1>
+        <p class="page-hero__lead">Our office team responds quickly — for urgent issues,
+          call the 24/7 emergency hotline directly.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <div id="contact-success" class="banner banner--success" style="display:none; margin-bottom:2rem;">
+          Thank you — your enquiry has been received. We'll be in touch shortly.
+        </div>
+
+        <div class="contact__grid">
+          <div>
+            <p class="eyebrow">Get In Touch</p>
+            <h2>Contact Details</h2>
+            <div class="divider"></div>
+
+            <div class="contact__detail">
+              <div class="contact__detail-icon" aria-hidden="true">&#128222;</div>
+              <div>
+                <div class="contact__detail-label">Phone</div>
+                <div class="contact__detail-value">
+                  <div><strong>Office</strong> <a href="tel:+18686284646">(868) 628-4646 / 4648</a></div>
+                  <div><strong>Emergency (24/7)</strong> <a href="tel:+18682806295">(868) 280-6295</a></div>
+                  <div><strong>Fax</strong> (868) 628-6876</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact__detail">
+              <div class="contact__detail-icon" aria-hidden="true">&#128205;</div>
+              <div>
+                <div class="contact__detail-label">Address</div>
+                <div class="contact__detail-value">#41 Mucurapo Road, St. James, Trinidad</div>
+              </div>
+            </div>
+
+            <div class="contact__detail">
+              <div class="contact__detail-icon" aria-hidden="true">&#128100;</div>
+              <div>
+                <div class="contact__detail-label">Managing Director</div>
+                <div class="contact__detail-value">Scott Fabres</div>
+              </div>
+            </div>
+
+            <div class="contact__map">
+              <iframe src="https://www.google.com/maps?q=%2341%20Mucurapo%20Road%2C%20St.%20James%2C%20Trinidad&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map to Plumbing Solutions, #41 Mucurapo Road, St. James"></iframe>
+            </div>
+
+            <div class="contact__photo-wrap">
+              <picture>
+                <source type="image/avif" srcset="/assets/optimized/contact-plumber-1600.avif 1600w, /assets/optimized/contact-plumber-800.avif 800w" sizes="(max-width: 768px) 100vw, 45vw">
+                <source type="image/webp" srcset="/assets/optimized/contact-plumber-1600.webp 1600w, /assets/optimized/contact-plumber-800.webp 800w" sizes="(max-width: 768px) 100vw, 45vw">
+                <img src="/assets/optimized/contact-plumber-1600.jpg" alt="Plumbing Solutions technician — placeholder photography" width="1600" height="1067" loading="lazy" decoding="async">
+              </picture>
+            </div>
+          </div>
+
+          <div class="contact__form">
+            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact.html?success=1" novalidate>
+              <input type="hidden" name="form-name" value="contact">
+              <p class="form-honey">
+                <label>Don't fill this out if you're human: <input name="bot-field"></label>
+              </p>
+              <input type="hidden" name="subject" id="subject" value="Website Enquiry - General Enquiry">
+
+              <div class="form-row form-row--2">
+                <div class="form-group">
+                  <label for="firstName">First Name</label>
+                  <input id="firstName" name="firstName" type="text" autocomplete="given-name">
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name</label>
+                  <input id="lastName" name="lastName" type="text" autocomplete="family-name">
+                </div>
+              </div>
+
+              <div class="form-row form-row--2">
+                <div class="form-group">
+                  <label for="email">Email Address <span style="color:var(--copper);">*</span></label>
+                  <input id="email" name="email" type="email" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input id="phone" name="phone" type="tel" autocomplete="tel">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="service">Service Required</label>
+                <select id="service" name="service">
+                  <option value="General Enquiry">General Enquiry</option>
+                  <option value="Pump Systems">Pump Systems</option>
+                  <option value="Hot Water">Hot Water</option>
+                  <option value="Drain Issues">Drain Issues</option>
+                  <option value="Sewer Problems">Sewer Problems</option>
+                  <option value="Faucet Repair &amp; Replacement">Faucet Repair &amp; Replacement</option>
+                  <option value="Garbage Disposals">Garbage Disposals</option>
+                  <option value="Toilets">Toilets</option>
+                  <option value="Water Problems">Water Problems</option>
+                  <option value="General Plumbing Repairs">General Plumbing Repairs</option>
+                  <option value="Schedule an Estimate">Schedule an Estimate</option>
+                  <option value="Referral Program">Referral Program</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Describe the issue, property type, and location…"></textarea>
+              </div>
+
+              <div class="form-submit">
+                <button type="submit" class="btn btn-copper">Send Enquiry</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer data-include="/partials/footer.html"></footer>
+
+  <script>
+    (function () {
+      var sel = document.getElementById('service');
+      var subj = document.getElementById('subject');
+      function sync() {
+        var opt = sel.options[sel.selectedIndex];
+        subj.value = 'Website Enquiry - ' + (opt ? opt.text : 'General Enquiry');
+      }
+      if (sel && subj) { sel.addEventListener('change', sync); sync(); }
+
+      if (new URLSearchParams(location.search).get('success') === '1') {
+        var b = document.getElementById('contact-success');
+        if (b) {
+          b.style.display = 'block';
+          b.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+    })();
+  </script>
+  <script src="/js/main.js?v=1" defer></script>
+</body>
+</html>
