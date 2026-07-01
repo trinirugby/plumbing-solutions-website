@@ -1,0 +1,12 @@
+{
+  "name": "plumbing-solutions-website",
+  "private": true,
+  "description": "Static website for Plumbing Solutions (residential and commercial plumbing, Trinidad & Tobago).",
+  "scripts": {
+    "dev": "npx --yes serve@latest .",
+    "optimize": "node scripts/optimize-images.mjs"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.5"
+  }
+}
