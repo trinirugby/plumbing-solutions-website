@@ -29,11 +29,11 @@
   font-size: 0.9375rem;
   color: var(--steel-700);
 }
-/* On the dark steel section, lighten list text + dividers for contrast */
+/* On the dark espresso steel section, use light text for contrast */
 .section--steel .client-list li,
 .section--steel .project-list li {
-  color: var(--steel-100);
-  border-bottom-color: rgba(255, 255, 255, 0.16);
+  color: #C4B8A6;
+  border-bottom-color: rgba(244, 239, 230, 0.14);
 }
 
 .guarantee-grid { display: grid; gap: 1.5rem; }
@@ -44,8 +44,8 @@
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: var(--copper);
-  color: var(--white);
+  background: var(--turq);
+  color: var(--sea-deep);
   display: flex;
   align-items: center;
   justify-content: center;

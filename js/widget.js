@@ -11,7 +11,7 @@
       init();
       return;
     }
-    fetch(PARTIAL_URL, { cache: 'no-cache' })
+    fetch(PARTIAL_URL)
       .then(function (r) { return r.ok ? r.text() : Promise.reject(new Error(PARTIAL_URL + ' ' + r.status)); })
       .then(function (html) {
         const root = document.createElement('div');
@@ -89,7 +89,11 @@
     chatWindow.classList.add('is-open');
     toggle.classList.add('is-open');
     toggle.setAttribute('aria-label', 'Close chat with Piper');
-    setTimeout(function () { input.focus(); }, 250);
+    // Don't autofocus on touch: the software keyboard eats ~300px and
+    // leaves no readable message area on a 375x667 phone.
+    if (window.matchMedia('(hover: hover)').matches) {
+      setTimeout(function () { input.focus(); }, 250);
+    }
   }
 
   function closeChat() {

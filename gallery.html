@@ -3,17 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>if('IntersectionObserver'in window)document.documentElement.classList.add('js')</script>
   <title>Gallery | Plumbing Solutions</title>
   <meta name="description" content="Residential, commercial, and refurbishment projects, plus Viega team training — a look at Plumbing Solutions' work across Trinidad &amp; Tobago.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap">
 
-  <link rel="stylesheet" href="/css/base.css?v=1">
-  <link rel="stylesheet" href="/css/gallery.css?v=1">
-  <link rel="stylesheet" href="/css/widget.css?v=1">
-  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/base.css?v=11">
+  <link rel="stylesheet" href="/css/motion.css?v=11">
+  <link rel="stylesheet" href="/css/ui.css?v=11">
+  <link rel="stylesheet" href="/css/gallery.css?v=11">
+  <link rel="stylesheet" href="/css/widget.css?v=11">
+  <link rel="icon" href="/assets/images/logo-ps-badge.png" type="image/png">
 </head>
 <body>
   <header data-include="/partials/nav.html"></header>
@@ -24,127 +27,138 @@
         <p class="eyebrow">Our Work</p>
         <h1 class="page-hero__title">Project Gallery</h1>
         <p class="page-hero__lead">Residential, commercial, and refurbishment work, plus
-          our Viega team training program.</p>
+          our Viega team training program. Tap any photo to view it full-size.</p>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <p class="gallery-notice">
+        <p class="gallery-notice" data-reveal>
           <strong>Placeholder photography.</strong> These are licensed stock images
           standing in until real project and team photos are supplied — swap the files
           in <code>assets/images/gallery-*</code> and re-run <code>npm run optimize</code>.
         </p>
 
         <div class="gallery-category">
-          <div class="gallery-category__head">
+          <div class="gallery-category__head" data-reveal>
             <h2>Residential Projects</h2>
             <span class="gallery-category__count">3 of 6 shown</span>
           </div>
-          <div class="gallery-grid">
-            <figure>
+          <div class="gallery-grid" data-reveal-group="80">
+            <figure data-lightbox data-lightbox-group="residential" data-full="/assets/optimized/gallery-residential-1-1600.jpg" data-caption="Residential bathroom project" data-alt="Residential bathroom project" tabindex="0" role="button" aria-label="View residential bathroom project full-size">
               <picture>
                 <source type="image/avif" srcset="/assets/optimized/gallery-residential-1-800.avif">
                 <source type="image/webp" srcset="/assets/optimized/gallery-residential-1-800.webp">
                 <img src="/assets/optimized/gallery-residential-1-800.jpg" alt="Residential bathroom project — placeholder" width="800" height="600" loading="lazy" decoding="async">
               </picture>
+              <span class="gallery-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>
             </figure>
-            <figure>
+            <figure data-lightbox data-lightbox-group="residential" data-full="/assets/optimized/gallery-residential-2-1600.jpg" data-caption="Residential bathroom fixture project" data-alt="Residential bathroom fixture project" tabindex="0" role="button" aria-label="View residential fixture project full-size">
               <picture>
                 <source type="image/avif" srcset="/assets/optimized/gallery-residential-2-800.avif">
                 <source type="image/webp" srcset="/assets/optimized/gallery-residential-2-800.webp">
                 <img src="/assets/optimized/gallery-residential-2-800.jpg" alt="Residential bathroom fixture project — placeholder" width="800" height="600" loading="lazy" decoding="async">
               </picture>
+              <span class="gallery-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>
             </figure>
-            <figure>
+            <figure data-lightbox data-lightbox-group="residential" data-full="/assets/optimized/gallery-residential-3-1600.jpg" data-caption="Residential sink and fixture install" data-alt="Residential sink and fixture install" tabindex="0" role="button" aria-label="View residential sink install full-size">
               <picture>
                 <source type="image/avif" srcset="/assets/optimized/gallery-residential-3-800.avif">
                 <source type="image/webp" srcset="/assets/optimized/gallery-residential-3-800.webp">
                 <img src="/assets/optimized/gallery-residential-3-800.jpg" alt="Residential sink and fixture install — placeholder" width="800" height="600" loading="lazy" decoding="async">
               </picture>
+              <span class="gallery-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>
             </figure>
           </div>
         </div>
 
         <div class="gallery-category">
-          <div class="gallery-category__head">
+          <div class="gallery-category__head" data-reveal>
             <h2>Commercial Projects</h2>
             <span class="gallery-category__count">3 of 7 shown</span>
           </div>
-          <div class="gallery-grid">
-            <figure>
+          <div class="gallery-grid" data-reveal-group="80">
+            <figure data-lightbox data-lightbox-group="commercial" data-full="/assets/optimized/gallery-commercial-1-1600.jpg" data-caption="Commercial construction crew" data-alt="Commercial construction crew" tabindex="0" role="button" aria-label="View commercial construction crew full-size">
               <picture>
                 <source type="image/avif" srcset="/assets/optimized/gallery-commercial-1-800.avif">
                 <source type="image/webp" srcset="/assets/optimized/gallery-commercial-1-800.webp">
                 <img src="/assets/optimized/gallery-commercial-1-800.jpg" alt="Commercial construction crew — placeholder" width="800" height="600" loading="lazy" decoding="async">
               </picture>
+              <span class="gallery-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>
             </figure>
-            <figure>
+            <figure data-lightbox data-lightbox-group="commercial" data-full="/assets/optimized/gallery-commercial-2-1600.jpg" data-caption="Commercial site plumbing work" data-alt="Commercial site plumbing work" tabindex="0" role="button" aria-label="View commercial site work full-size">
               <picture>
                 <source type="image/avif" srcset="/assets/optimized/gallery-commercial-2-800.avif">
                 <source type="image/webp" srcset="/assets/optimized/gallery-commercial-2-800.webp">
                 <img src="/assets/optimized/gallery-commercial-2-800.jpg" alt="Commercial site plumbing work — placeholder" width="800" height="600" loading="lazy" decoding="async">
               </picture>
+              <span class="gallery-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>
             </figure>
-            <figure>
+            <figure data-lightbox data-lightbox-group="commercial" data-full="/assets/optimized/gallery-commercial-3-1600.jpg" data-caption="Commercial construction team on-site" data-alt="Commercial construction team on-site" tabindex="0" role="button" aria-label="View commercial team on-site full-size">
               <picture>
                 <source type="image/avif" srcset="/assets/optimized/gallery-commercial-3-800.avif">
                 <source type="image/webp" srcset="/assets/optimized/gallery-commercial-3-800.webp">
                 <img src="/assets/optimized/gallery-commercial-3-800.jpg" alt="Commercial construction team on-site — placeholder" width="800" height="600" loading="lazy" decoding="async">
               </picture>
+              <span class="gallery-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>
             </figure>
           </div>
         </div>
 
         <div class="gallery-category">
-          <div class="gallery-category__head">
+          <div class="gallery-category__head" data-reveal>
             <h2>Refurbishment Projects</h2>
             <span class="gallery-category__count">2 of 2 shown</span>
           </div>
-          <div class="gallery-grid">
-            <figure>
+          <div class="gallery-grid" data-reveal-group="80">
+            <figure data-lightbox data-lightbox-group="refurb" data-full="/assets/optimized/gallery-refurb-1-1600.jpg" data-caption="Bathroom refurbishment project" data-alt="Bathroom refurbishment project" tabindex="0" role="button" aria-label="View bathroom refurbishment full-size">
               <picture>
                 <source type="image/avif" srcset="/assets/optimized/gallery-refurb-1-800.avif">
                 <source type="image/webp" srcset="/assets/optimized/gallery-refurb-1-800.webp">
                 <img src="/assets/optimized/gallery-refurb-1-800.jpg" alt="Bathroom refurbishment project — placeholder" width="800" height="600" loading="lazy" decoding="async">
               </picture>
+              <span class="gallery-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>
             </figure>
-            <figure>
+            <figure data-lightbox data-lightbox-group="refurb" data-full="/assets/optimized/gallery-refurb-2-1600.jpg" data-caption="Refurbished bathroom fixtures" data-alt="Refurbished bathroom fixtures" tabindex="0" role="button" aria-label="View refurbished fixtures full-size">
               <picture>
                 <source type="image/avif" srcset="/assets/optimized/gallery-refurb-2-800.avif">
                 <source type="image/webp" srcset="/assets/optimized/gallery-refurb-2-800.webp">
                 <img src="/assets/optimized/gallery-refurb-2-800.jpg" alt="Refurbished bathroom fixtures — placeholder" width="800" height="600" loading="lazy" decoding="async">
               </picture>
+              <span class="gallery-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>
             </figure>
           </div>
         </div>
 
         <div class="gallery-category">
-          <div class="gallery-category__head">
+          <div class="gallery-category__head" data-reveal>
             <h2>Viega Team Training</h2>
             <span class="gallery-category__count">3 of 12 shown</span>
           </div>
-          <div class="gallery-grid">
-            <figure>
+          <div class="gallery-grid" data-reveal-group="80">
+            <figure data-lightbox data-lightbox-group="training" data-full="/assets/optimized/gallery-training-1-1600.jpg" data-caption="Technician training session" data-alt="Technician training session" tabindex="0" role="button" aria-label="View technician training full-size">
               <picture>
                 <source type="image/avif" srcset="/assets/optimized/gallery-training-1-800.avif">
                 <source type="image/webp" srcset="/assets/optimized/gallery-training-1-800.webp">
                 <img src="/assets/optimized/gallery-training-1-800.jpg" alt="Technician training session — placeholder" width="800" height="600" loading="lazy" decoding="async">
               </picture>
+              <span class="gallery-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>
             </figure>
-            <figure>
+            <figure data-lightbox data-lightbox-group="training" data-full="/assets/optimized/gallery-training-2-1600.jpg" data-caption="Team training workshop" data-alt="Team training workshop" tabindex="0" role="button" aria-label="View team training workshop full-size">
               <picture>
                 <source type="image/avif" srcset="/assets/optimized/gallery-training-2-800.avif">
                 <source type="image/webp" srcset="/assets/optimized/gallery-training-2-800.webp">
                 <img src="/assets/optimized/gallery-training-2-800.jpg" alt="Team training workshop — placeholder" width="800" height="600" loading="lazy" decoding="async">
               </picture>
+              <span class="gallery-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>
             </figure>
-            <figure>
+            <figure data-lightbox data-lightbox-group="training" data-full="/assets/optimized/gallery-training-3-1600.jpg" data-caption="Technician on training exercise" data-alt="Technician on training exercise" tabindex="0" role="button" aria-label="View technician exercise full-size">
               <picture>
                 <source type="image/avif" srcset="/assets/optimized/gallery-training-3-800.avif">
                 <source type="image/webp" srcset="/assets/optimized/gallery-training-3-800.webp">
                 <img src="/assets/optimized/gallery-training-3-800.jpg" alt="Technician on training exercise — placeholder" width="800" height="600" loading="lazy" decoding="async">
               </picture>
+              <span class="gallery-zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v6M8 11h6"/></svg></span>
             </figure>
           </div>
         </div>
@@ -153,7 +167,9 @@
   </main>
 
   <footer data-include="/partials/footer.html"></footer>
-  <script src="/js/main.js?v=1" defer></script>
-  <script src="/js/widget.js?v=1" defer></script>
+  <script src="/js/main.js?v=11" defer></script>
+  <script src="/js/motion.js?v=11" defer></script>
+  <script src="/js/ui.js?v=11" defer></script>
+  <script src="/js/widget.js?v=11" defer></script>
 </body>
 </html>

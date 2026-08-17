@@ -1,0 +1,170 @@
+/* ============================================================
+   ui.css — modal / lightbox, tabs, and interactive component
+   styles. Depends on tokens from base.css.
+   ============================================================ */
+
+/* ---------- Modal / lightbox ---------- */
+.modal[hidden] { display: none; }
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1rem, 4vw, 2.5rem);
+}
+.modal__scrim {
+  position: absolute;
+  inset: 0;
+  background: rgba(23, 19, 15, 0.62);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  transition: opacity var(--dur-base) var(--ease-standard);
+}
+.modal.is-open .modal__scrim { opacity: 1; }
+.modal__dialog {
+  position: relative;
+  z-index: 1;
+  width: min(640px, 100%);
+  max-height: 88vh;
+  overflow: auto;
+  background: var(--cloud);
+  color: var(--sea-ink);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-pop);
+  padding: clamp(1.75rem, 4vw, 2.75rem);
+  opacity: 0;
+  transform: translateY(14px) scale(0.97);
+  transform-origin: var(--modal-origin, 50% 50%);
+  transition: opacity var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-spring);
+}
+.modal.is-open .modal__dialog { opacity: 1; transform: none; }
+/* lightbox variant: wider, transparent frame */
+.modal--lightbox .modal__dialog {
+  width: min(1000px, 100%);
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  overflow: visible;
+}
+.modal__close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 999px;
+  background: var(--sand-200);
+  color: var(--sea-deep);
+  cursor: pointer;
+  transition: background-color var(--dur-fast) ease, transform var(--dur-fast) var(--ease-spring);
+}
+.modal--lightbox .modal__close { background: var(--cloud); top: -18px; right: -8px; box-shadow: var(--shadow-card); }
+.modal__close:hover { background: var(--coral); color: var(--sea-deep); transform: rotate(90deg); }
+.modal__close svg { width: 20px; height: 20px; }
+
+.modal__content .modal-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--teal-ink);
+  margin-bottom: 0.5rem;
+}
+.modal__content h3 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 0.85rem; }
+.modal__content p { color: var(--muted); margin-bottom: 1rem; }
+.modal__content ul.modal-list { display: flex; flex-direction: column; gap: 0.55rem; margin-bottom: 1.25rem; }
+.modal__content ul.modal-list li { position: relative; padding-left: 1.6rem; color: var(--sea-ink); }
+.modal__content ul.modal-list li::before {
+  content: "";
+  position: absolute; left: 0; top: 0.5em;
+  width: 8px; height: 8px; border-radius: 2px;
+  background: var(--turq);
+}
+
+/* lightbox media + caption + nav */
+.lightbox__figure { margin: 0; }
+.lightbox__img { width: 100%; height: auto; max-height: 78vh; object-fit: contain; border-radius: var(--radius-md); background: var(--sea-deep); }
+.lightbox__caption { margin-top: 0.85rem; text-align: center; color: var(--cloud); font-size: 0.95rem; }
+.lightbox__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px; height: 48px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border: none; border-radius: 999px;
+  background: rgba(255,255,255,0.9);
+  color: var(--sea-deep);
+  cursor: pointer;
+  transition: background-color var(--dur-fast) ease, transform var(--dur-fast) var(--ease-spring);
+}
+.lightbox__nav:hover { background: var(--coral); }
+.lightbox__nav--prev { left: -18px; }
+.lightbox__nav--next { right: -18px; }
+.lightbox__nav svg { width: 22px; height: 22px; }
+@media (max-width: 620px) {
+  .lightbox__nav--prev { left: 4px; }
+  .lightbox__nav--next { right: 4px; }
+}
+
+body.modal-open { overflow: hidden; }
+
+/* ---------- Tabs ---------- */
+.tabs__list {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0.4rem;
+  background: var(--cloud);
+  border: 1px solid var(--mist);
+  border-radius: 999px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 2rem;
+}
+.tabs__tab {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  background: transparent;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color var(--dur-base) var(--ease-out), color var(--dur-base) var(--ease-out);
+}
+.tabs__tab:hover { color: var(--sea-deep); }
+.tabs__tab[aria-selected="true"] { background: var(--sea-deep); color: var(--cloud); }
+.tabs__panels { position: relative; }
+.tabs__panel[hidden] { display: none; }
+.tabs__panel {
+  animation: tab-in var(--dur-base) var(--ease-out);
+}
+.tabs__panel.is-leaving { animation: tab-out var(--dur-fast) var(--ease-standard) forwards; }
+@keyframes tab-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes tab-out { to { opacity: 0; transform: translateY(-8px); } }
+
+/* ---------- Card that opens a modal ---------- */
+.has-modal { cursor: pointer; }
+.card-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--coral-ink);
+}
+.card-more svg { width: 15px; height: 15px; transition: transform var(--dur-fast) var(--ease-spring); }
+.has-modal:hover .card-more svg { transform: translateX(4px); }

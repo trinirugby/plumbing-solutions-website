@@ -3,17 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>if('IntersectionObserver'in window)document.documentElement.classList.add('js')</script>
   <title>Contact | Plumbing Solutions</title>
   <meta name="description" content="Reach Plumbing Solutions at #41 Mucurapo Road, St. James, Trinidad — office (868) 628-4646/4648, 24/7 emergency hotline (868) 280-6295, or send an enquiry.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap">
 
-  <link rel="stylesheet" href="/css/base.css?v=1">
-  <link rel="stylesheet" href="/css/contact.css?v=1">
-  <link rel="stylesheet" href="/css/widget.css?v=1">
-  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/base.css?v=11">
+  <link rel="stylesheet" href="/css/motion.css?v=11">
+  <link rel="stylesheet" href="/css/ui.css?v=11">
+  <link rel="stylesheet" href="/css/contact.css?v=11">
+  <link rel="stylesheet" href="/css/widget.css?v=11">
+  <link rel="icon" href="/assets/images/logo-ps-badge.png" type="image/png">
 </head>
 <body>
   <header data-include="/partials/nav.html"></header>
@@ -35,7 +38,7 @@
         </div>
 
         <div class="contact__grid">
-          <div>
+          <div data-reveal>
             <p class="eyebrow">Get In Touch</p>
             <h2>Contact Details</h2>
             <div class="divider"></div>
@@ -81,7 +84,7 @@
             </div>
           </div>
 
-          <div class="contact__form">
+          <div class="contact__form" data-reveal>
             <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact.html?success=1" novalidate>
               <input type="hidden" name="form-name" value="contact">
               <p class="form-honey">
@@ -165,7 +168,9 @@
       }
     })();
   </script>
-  <script src="/js/main.js?v=1" defer></script>
-  <script src="/js/widget.js?v=1" defer></script>
+  <script src="/js/main.js?v=11" defer></script>
+  <script src="/js/motion.js?v=11" defer></script>
+  <script src="/js/ui.js?v=11" defer></script>
+  <script src="/js/widget.js?v=11" defer></script>
 </body>
 </html>

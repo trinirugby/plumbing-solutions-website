@@ -3,16 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>if('IntersectionObserver'in window)document.documentElement.classList.add('js')</script>
   <title>Career | Plumbing Solutions</title>
   <meta name="description" content="Join Plumbing Solutions — health insurance, national holidays, paid vacation, and uniforms provided. Apply online for plumber and apprentice positions in Trinidad &amp; Tobago.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap">
 
-  <link rel="stylesheet" href="/css/base.css?v=1">
-  <link rel="stylesheet" href="/css/widget.css?v=1">
-  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/base.css?v=11">
+  <link rel="stylesheet" href="/css/motion.css?v=11">
+  <link rel="stylesheet" href="/css/ui.css?v=11">
+  <link rel="stylesheet" href="/css/widget.css?v=11">
+  <link rel="icon" href="/assets/images/logo-ps-badge.png" type="image/png">
 </head>
 <body>
   <header data-include="/partials/nav.html"></header>
@@ -23,12 +26,12 @@
         <p class="eyebrow">Careers</p>
         <h1 class="page-hero__title">Join a Crew That's Been at This Since 1997</h1>
         <p class="page-hero__lead">We're always looking for experienced plumbers and
-          apprentices ready to join a 65+ strong team across Trinidad &amp; Tobago.</p>
+          apprentices across Trinidad &amp; Tobago.</p>
       </div>
     </section>
 
     <section class="section">
-      <div class="container grid-2" style="align-items:start;">
+      <div class="container grid-2" style="align-items:start;" data-reveal-group="90">
         <div>
           <p class="eyebrow">Why Work Here</p>
           <h2>Benefits</h2>
@@ -60,7 +63,7 @@
 
     <!-- ─────────── APPLICATION FORM ─────────── -->
     <section id="apply" class="section section--dark">
-      <div class="container">
+      <div class="container" data-reveal>
         <div id="career-success" class="banner banner--success" style="display:none; margin-bottom:2rem;">
           Thank you — your application has been received. We'll be in touch if there's a fit.
         </div>
@@ -204,7 +207,9 @@
       }
     })();
   </script>
-  <script src="/js/main.js?v=1" defer></script>
-  <script src="/js/widget.js?v=1" defer></script>
+  <script src="/js/main.js?v=11" defer></script>
+  <script src="/js/motion.js?v=11" defer></script>
+  <script src="/js/ui.js?v=11" defer></script>
+  <script src="/js/widget.js?v=11" defer></script>
 </body>
 </html>

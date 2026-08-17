@@ -4,10 +4,26 @@
   .product-row--reverse .product-row__text { order: 2; }
   .product-row--reverse .product-row__media { order: 1; }
 }
+.product-row__text, .product-row__media { min-width: 0; }
+.product-row__text { position: relative; }
+.product-row__num {
+  position: absolute;
+  top: -2.5rem;
+  left: -0.5rem;
+  z-index: -1;
+}
+.product-row__media {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
 .product-row__media img {
   width: 100%;
   height: auto;          /* override the img height attribute so aspect-ratio drives height */
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
+  transition: transform var(--dur-slow) var(--ease-out);
 }
+.product-row__media:hover img { transform: scale(1.04); }

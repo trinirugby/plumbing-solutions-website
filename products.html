@@ -3,17 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>if('IntersectionObserver'in window)document.documentElement.classList.add('js')</script>
   <title>Products | Plumbing Solutions</title>
   <meta name="description" content="STA-RITE pumps and storage tanks, water heaters, Cla-Val automatic control valves, and Halsey Taylor water coolers — supplied by Plumbing Solutions, Trinidad &amp; Tobago.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap">
 
-  <link rel="stylesheet" href="/css/base.css?v=1">
-  <link rel="stylesheet" href="/css/products.css?v=1">
-  <link rel="stylesheet" href="/css/widget.css?v=1">
-  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/base.css?v=11">
+  <link rel="stylesheet" href="/css/motion.css?v=11">
+  <link rel="stylesheet" href="/css/ui.css?v=11">
+  <link rel="stylesheet" href="/css/products.css?v=11">
+  <link rel="stylesheet" href="/css/widget.css?v=11">
+  <link rel="icon" href="/assets/images/logo-ps-badge.png" type="image/png">
 </head>
 <body>
   <header data-include="/partials/nav.html"></header>
@@ -32,7 +35,7 @@
     <section class="section">
       <div class="container">
         <div class="product-row">
-          <div class="product-row__text">
+          <div class="product-row__text" data-reveal>
             <p class="eyebrow">Pumps &amp; Storage</p>
             <h2>STA-RITE</h2>
             <div class="divider"></div>
@@ -40,7 +43,7 @@
               in over 100 countries. We supply and install the full range for residential
               and commercial water systems, sized correctly by our technicians.</p>
           </div>
-          <div class="product-row__media">
+          <div class="product-row__media" data-reveal>
             <picture>
               <source type="image/avif" srcset="/assets/optimized/products-pipes-1600.avif 1600w, /assets/optimized/products-pipes-800.avif 800w" sizes="(max-width: 768px) 100vw, 45vw">
               <source type="image/webp" srcset="/assets/optimized/products-pipes-1600.webp 1600w, /assets/optimized/products-pipes-800.webp 800w" sizes="(max-width: 768px) 100vw, 45vw">
@@ -50,7 +53,7 @@
         </div>
 
         <div class="product-row product-row--reverse">
-          <div class="product-row__text">
+          <div class="product-row__text" data-reveal>
             <p class="eyebrow">Automatic Control Valves</p>
             <h2>Cla-Val</h2>
             <div class="divider"></div>
@@ -58,7 +61,7 @@
               install Cla-Val valves for pressure regulation, flow control, and surge
               protection on commercial and industrial systems.</p>
           </div>
-          <div class="product-row__media">
+          <div class="product-row__media" data-reveal>
             <picture>
               <source type="image/avif" srcset="/assets/optimized/products-valve-1600.avif 1600w, /assets/optimized/products-valve-800.avif 800w" sizes="(max-width: 768px) 100vw, 45vw">
               <source type="image/webp" srcset="/assets/optimized/products-valve-1600.webp 1600w, /assets/optimized/products-valve-800.webp 800w" sizes="(max-width: 768px) 100vw, 45vw">
@@ -67,7 +70,7 @@
           </div>
         </div>
 
-        <div class="grid-2">
+        <div class="grid-2" data-reveal-group="120">
           <article class="card-bracket">
             <p class="tile__label">Water Heaters</p>
             <h3>Electric Tank-Type Water Heaters</h3>
@@ -84,18 +87,36 @@
       </div>
     </section>
 
-    <section class="section section--steel">
-      <div class="container text-center">
-        <h2>Talk to a sales representative</h2>
-        <p style="max-width:52ch; margin-inline:auto;">Call our office to discuss product
-          availability, pricing, and installation for your project.</p>
-        <a href="tel:+18686284646" class="btn btn-brass mt-lg">Call (868) 628-4646</a>
+    <!-- ─────────── VIDEO BAND ─────────── -->
+    <section class="video-band">
+      <div class="video-band__media">
+        <video autoplay muted loop playsinline webkit-playsinline preload="none"
+               disablepictureinpicture disableremoteplayback
+               controlslist="nodownload noplaybackrate nofullscreen noremoteplayback"
+               poster="/assets/images/band-band-services-poster.jpg" width="1600" height="900"
+               aria-hidden="true" tabindex="-1">
+          <source src="/assets/video/band-services.mp4" type="video/mp4">
+        </video>
+        <div class="video-band__tint"></div>
+        <div class="video-band__scrim"></div>
+      </div>
+      <div class="container">
+        <div class="video-band__content" data-reveal>
+          <p class="eyebrow">Supplied &amp; Installed</p>
+          <h2>Warrantied product, fitted by our own crew</h2>
+          <p style="margin-top:0.75rem;">We don't just sell boxes. Every product line we stock is
+            installed and serviced by our own crew — so the warranty, the fit, and the
+            follow-up all come from one team.</p>
+          <a href="tel:+18686284646" class="btn btn-copper" style="margin-top:1.5rem;">Call (868) 628-4646</a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer data-include="/partials/footer.html"></footer>
-  <script src="/js/main.js?v=1" defer></script>
-  <script src="/js/widget.js?v=1" defer></script>
+  <script src="/js/main.js?v=11" defer></script>
+  <script src="/js/motion.js?v=11" defer></script>
+  <script src="/js/ui.js?v=11" defer></script>
+  <script src="/js/widget.js?v=11" defer></script>
 </body>
 </html>

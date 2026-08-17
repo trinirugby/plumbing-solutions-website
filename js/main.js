@@ -12,7 +12,13 @@
       .catch((err) => console.error("Include failed:", err));
   });
 
-  Promise.all(fetches).then(setupNav).then(markActiveLink).then(setupGauge);
+  Promise.all(fetches)
+    .then(setupNav)
+    .then(markActiveLink)
+    .then(setupGauge)
+    .then(function () {
+      document.dispatchEvent(new CustomEvent("partials:ready"));
+    });
 
   function setupNav() {
     const btn = document.querySelector(".nav__hamburger");

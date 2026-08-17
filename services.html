@@ -3,16 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>if('IntersectionObserver'in window)document.documentElement.classList.add('js')</script>
   <title>Services | Plumbing Solutions</title>
   <meta name="description" content="Pump systems, hot water, drains, sewer lines, faucets, garbage disposals, toilets, water problems, and general plumbing repairs — Plumbing Solutions, Trinidad &amp; Tobago.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap">
 
-  <link rel="stylesheet" href="/css/base.css?v=1">
-  <link rel="stylesheet" href="/css/widget.css?v=1">
-  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/base.css?v=11">
+  <link rel="stylesheet" href="/css/motion.css?v=11">
+  <link rel="stylesheet" href="/css/ui.css?v=11">
+  <link rel="stylesheet" href="/css/widget.css?v=11">
+  <link rel="icon" href="/assets/images/logo-ps-badge.png" type="image/png">
 </head>
 <body>
   <header data-include="/partials/nav.html"></header>
@@ -22,118 +25,286 @@
       <div class="container page-hero__content">
         <p class="eyebrow">What We Do</p>
         <h1 class="page-hero__title">Full-Service Plumbing, Residential &amp; Commercial</h1>
-        <p class="page-hero__lead">Nine service lines, one crew of 65+ trained technicians —
-          trucks stocked with parts, ready to dispatch across Trinidad &amp; Tobago.</p>
+        <p class="page-hero__lead">Trucks stocked with parts, ready to dispatch across
+          Trinidad &amp; Tobago.</p>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="grid-3">
+        <div data-tabs style="display:flex;flex-direction:column;align-items:center;">
+          <div class="tabs__list" role="tablist" aria-label="Service categories">
+            <button class="tabs__tab" role="tab" id="tab-res" aria-controls="panel-res" aria-selected="true">Residential</button>
+            <button class="tabs__tab" role="tab" id="tab-com" aria-controls="panel-com" aria-selected="false" tabindex="-1">Commercial</button>
+            <button class="tabs__tab" role="tab" id="tab-emg" aria-controls="panel-emg" aria-selected="false" tabindex="-1">Emergency</button>
+          </div>
 
-          <article class="card-bracket">
-            <p class="tile__label">Pump Systems</p>
-            <h3>Water Pumps</h3>
-            <p>Residential and commercial pump installation using Goulds and Sta-Rite —
-              US-made, fully warrantied units from &frac12; H.P. up to 5 H.P., installed with
-              proper safety mechanisms.</p>
-          </article>
+          <div class="tabs__panels" style="width:100%;">
+            <!-- Residential -->
+            <div class="tabs__panel" role="tabpanel" id="panel-res" aria-labelledby="tab-res">
+              <div class="grid-3">
+                <article class="card-bracket has-modal" data-modal-target="#svc-pumps" tabindex="0" role="button" aria-haspopup="dialog">
+                  <p class="tile__label">Pump Systems</p>
+                  <h3>Water Pumps</h3>
+                  <p>Goulds &amp; Sta-Rite pump installation, &frac12; H.P. to 5 H.P., fully warrantied and fitted with proper safety mechanisms.</p>
+                  <span class="card-more">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                </article>
+                <article class="card-bracket has-modal" data-modal-target="#svc-heaters" tabindex="0" role="button" aria-haspopup="dialog">
+                  <p class="tile__label">Hot Water</p>
+                  <h3>Water Heaters</h3>
+                  <p>A.O. Smith, Rheem &amp; Bradford White heaters, recirculating pumps, and instant hot water dispensers up to 190&deg;F.</p>
+                  <span class="card-more">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                </article>
+                <article class="card-bracket has-modal" data-modal-target="#svc-drains" tabindex="0" role="button" aria-haspopup="dialog">
+                  <p class="tile__label">Drain Issues</p>
+                  <h3>Drain Cleaning</h3>
+                  <p>Clearing for sinks, tubs, showers, toilets and floor drains, plus repair of drain, waste &amp; vent lines.</p>
+                  <span class="card-more">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                </article>
+                <article class="card-bracket has-modal" data-modal-target="#svc-faucets" tabindex="0" role="button" aria-haspopup="dialog">
+                  <p class="tile__label">Faucet Repair</p>
+                  <h3>Faucets &amp; Showers</h3>
+                  <p>Repairs for all brands — parts carried on every truck — plus supply of leading faucet and shower brands.</p>
+                  <span class="card-more">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                </article>
+                <article class="card-bracket has-modal" data-modal-target="#svc-toilets" tabindex="0" role="button" aria-haspopup="dialog">
+                  <p class="tile__label">Toilets</p>
+                  <h3>Toilet Install &amp; Repair</h3>
+                  <p>Low-flow &ldquo;guaranteed flush&rdquo; and standard toilets, P-Trap or S-Trap, with full repair parts.</p>
+                  <span class="card-more">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                </article>
+                <article class="card-bracket has-modal" data-modal-target="#svc-disposals" tabindex="0" role="button" aria-haspopup="dialog">
+                  <p class="tile__label">Garbage Disposals</p>
+                  <h3>Disposal Installation</h3>
+                  <p>Supply and installation of garbage disposals in a range of sizes for residential kitchens.</p>
+                  <span class="card-more">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                </article>
+              </div>
+            </div>
 
-          <article class="card-bracket">
-            <p class="tile__label">Hot Water</p>
-            <h3>Water Heaters &amp; Recirculating Systems</h3>
-            <p>Supply and install A.O. Smith, Rheem, and Bradford White water heaters
-              (6-year warranty on electric tanks), hot water recirculating pumps, and
-              instant hot water dispensers up to 190&deg;F.</p>
-          </article>
+            <!-- Commercial -->
+            <div class="tabs__panel" role="tabpanel" id="panel-com" aria-labelledby="tab-com" hidden>
+              <div class="grid-3">
+                <article class="card-bracket has-modal" data-modal-target="#svc-sewer" tabindex="0" role="button" aria-haspopup="dialog">
+                  <p class="tile__label">Sewer Problems</p>
+                  <h3>Sewer Line Service</h3>
+                  <p>Cleaning for 1&frac12;&Prime;&ndash;10&Prime; lines, camera inspection, RootX treatment, and repair to WASA code.</p>
+                  <span class="card-more">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                </article>
+                <article class="card-bracket has-modal" data-modal-target="#svc-tanks" tabindex="0" role="button" aria-haspopup="dialog">
+                  <p class="tile__label">Water Problems</p>
+                  <h3>Water Tanks &amp; Mains</h3>
+                  <p>Tanks sized correctly by our technicians, plus water main and secondary line leak repair and replacement.</p>
+                  <span class="card-more">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                </article>
+                <article class="card-bracket has-modal" data-modal-target="#svc-camera" tabindex="0" role="button" aria-haspopup="dialog">
+                  <p class="tile__label">Diagnostics</p>
+                  <h3>Video Camera Inspection</h3>
+                  <p>In-line camera survey with DVD recording — locate blockages, breaks and root intrusion before you dig.</p>
+                  <span class="card-more">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                </article>
+                <article class="card-bracket has-modal" data-modal-target="#svc-drains" tabindex="0" role="button" aria-haspopup="dialog">
+                  <p class="tile__label">Drain Issues</p>
+                  <h3>Drain, Waste &amp; Vent</h3>
+                  <p>Repair or replacement of building drain, waste and vent lines for offices, plants and multi-storey builds.</p>
+                  <span class="card-more">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                </article>
+                <article class="card-bracket has-modal" data-modal-target="#svc-pumps" tabindex="0" role="button" aria-haspopup="dialog">
+                  <p class="tile__label">Pump Systems</p>
+                  <h3>Commercial Pump Systems</h3>
+                  <p>Booster and transfer pump systems sized for commercial demand, with safety cut-offs and service contracts.</p>
+                  <span class="card-more">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                </article>
+                <article class="card-bracket has-modal" data-modal-target="#svc-general" tabindex="0" role="button" aria-haspopup="dialog">
+                  <p class="tile__label">Approvals</p>
+                  <h3>WASA Approvals &amp; As-Builts</h3>
+                  <p>WASA approvals, As-Built drawings and professional sign-off from a 25+ year Caribbean contractor.</p>
+                  <span class="card-more">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                </article>
+              </div>
+            </div>
 
-          <article class="card-bracket">
-            <p class="tile__label">Drain Issues</p>
-            <h3>Drain Cleaning &amp; Repair</h3>
-            <p>Cleaning and clearing for sinks, dishwashers, basins, tubs, showers, toilets,
-              washing machines, and floor drains — plus repair or replacement of house and
-              building drain, waste, and vent lines.</p>
-          </article>
-
-          <article class="card-bracket">
-            <p class="tile__label">Sewer Problems</p>
-            <h3>Sewer Line Service</h3>
-            <p>Sewer line cleaning for 1&frac12;&Prime; to 10&Prime; lines, video camera
-              inspection with DVD recording, RootX root-killer treatment, and sewer line
-              repair or replacement to WASA code.</p>
-          </article>
-
-          <article class="card-bracket">
-            <p class="tile__label">Faucet Repair</p>
-            <h3>Faucet Repair &amp; Replacement</h3>
-            <p>Repairs for all brands — parts carried on every truck — plus supply of
-              leading faucet and shower brands, all backed by manufacturer warranty.</p>
-          </article>
-
-          <article class="card-bracket">
-            <p class="tile__label">Garbage Disposals</p>
-            <h3>Disposal Installation</h3>
-            <p>Supply and installation of garbage disposals in a range of sizes for
-              residential and commercial kitchens.</p>
-          </article>
-
-          <article class="card-bracket">
-            <p class="tile__label">Toilets</p>
-            <h3>Toilet Installation &amp; Repair</h3>
-            <p>Low-flow &ldquo;guaranteed flush&rdquo; and standard toilets, P-Trap or
-              S-Trap, American and English brands, with full repair parts for one-piece,
-              two-piece, and English P-Trap sets.</p>
-          </article>
-
-          <article class="card-bracket">
-            <p class="tile__label">Water Problems</p>
-            <h3>Water Tanks &amp; Line Repair</h3>
-            <p>Water tanks sized correctly by our technicians, plus water main and
-              secondary line leak repair and replacement.</p>
-          </article>
-
-          <article class="card-bracket">
-            <p class="tile__label">General Repairs</p>
-            <h3>General Plumbing Repairs</h3>
-            <p>Anything else — including WASA approvals, As-Built Drawings, and
-              professional advice from a 25+ year Caribbean plumbing contractor.</p>
-          </article>
-
+            <!-- Emergency -->
+            <div class="tabs__panel" role="tabpanel" id="panel-emg" aria-labelledby="tab-emg" hidden>
+              <div class="section--dark" style="border-radius:var(--radius-lg);padding:1.5rem 1.75rem;margin-bottom:1.75rem;display:flex;flex-wrap:wrap;gap:1rem 1.75rem;align-items:center;justify-content:space-between;">
+                <div>
+                  <p class="eyebrow" style="color:var(--turq-light);margin-bottom:0.35rem;">Round the clock</p>
+                  <h3 style="color:#fff;">Burst pipe or backup right now?</h3>
+                </div>
+                <a href="tel:+18682806295" class="btn btn-brass">Call 280-6295 &mdash; 24/7</a>
+              </div>
+              <div class="grid-3">
+                <article class="card-bracket has-modal" data-modal-target="#svc-burst" tabindex="0" role="button" aria-haspopup="dialog">
+                  <p class="tile__label">Urgent</p>
+                  <h3>Burst Pipes &amp; Leaks</h3>
+                  <p>Fast isolation and repair of burst mains and hidden leaks to stop water damage before it spreads.</p>
+                  <span class="card-more">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                </article>
+                <article class="card-bracket has-modal" data-modal-target="#svc-drains" tabindex="0" role="button" aria-haspopup="dialog">
+                  <p class="tile__label">Urgent</p>
+                  <h3>Blocked Drains</h3>
+                  <p>Rapid clearing of blocked sinks, toilets and floor drains — machine augers and jetting on the truck.</p>
+                  <span class="card-more">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                </article>
+                <article class="card-bracket has-modal" data-modal-target="#svc-heaters" tabindex="0" role="button" aria-haspopup="dialog">
+                  <p class="tile__label">Urgent</p>
+                  <h3>No Hot Water</h3>
+                  <p>Same-day diagnosis and repair or replacement of failed water heaters and recirculating pumps.</p>
+                  <span class="card-more">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                </article>
+                <article class="card-bracket has-modal" data-modal-target="#svc-sewer" tabindex="0" role="button" aria-haspopup="dialog">
+                  <p class="tile__label">Urgent</p>
+                  <h3>Sewer Backups</h3>
+                  <p>Emergency sewer clearing and RootX treatment to get waste flowing and protect your property.</p>
+                  <span class="card-more">Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                </article>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section section--dark">
-      <div class="container">
-        <p class="eyebrow">Next Step</p>
-        <h2>Ready to get started?</h2>
-        <div class="divider"></div>
-        <div class="grid-3 mt-lg">
-          <div>
-            <h4 style="color:var(--white);">Schedule a Plumber</h4>
-            <p style="margin-top:0.5rem;">Book a technician for a repair, installation, or
-              maintenance visit.</p>
-            <a href="/contact.html" class="btn btn-copper btn-sm mt-lg" style="margin-top:1rem;">Schedule Now</a>
-          </div>
-          <div>
-            <h4 style="color:var(--white);">Schedule an Estimate</h4>
-            <p style="margin-top:0.5rem;">Planning a renovation or new build? Get a written
-              estimate before work begins.</p>
-            <a href="/contact.html" class="btn btn-outline-white btn-sm" style="margin-top:1rem;">Request Estimate</a>
-          </div>
-          <div>
-            <h4 style="color:var(--white);">Referral Program</h4>
-            <p style="margin-top:0.5rem;">Refer a friend or business and get rewarded once
-              their job is complete.</p>
-            <a href="/contact.html" class="btn btn-outline-white btn-sm" style="margin-top:1rem;">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
+  <!-- ─────────── Service detail templates (modals) ─────────── -->
+  <template id="svc-pumps">
+    <p class="modal-eyebrow">Pump Systems</p>
+    <h3>Water Pump Installation</h3>
+    <p>Residential and commercial pump installation using US-made Goulds and Sta-Rite units — from &frac12; H.P. up to 5 H.P., fully warrantied and fitted with proper safety mechanisms.</p>
+    <ul class="modal-list">
+      <li>Correct sizing for your building's demand and pressure</li>
+      <li>Goulds &amp; Sta-Rite — warrantied US-made units</li>
+      <li>Low-water cut-offs and safety protection fitted as standard</li>
+      <li>Service, repair and replacement of existing pumps</li>
+    </ul>
+    <a href="/contact.html" class="btn btn-copper btn-sm">Schedule this service</a>
+  </template>
+  <template id="svc-heaters">
+    <p class="modal-eyebrow">Hot Water</p>
+    <h3>Water Heaters &amp; Recirculating Systems</h3>
+    <p>Supply and install A.O. Smith, Rheem and Bradford White water heaters, hot water recirculating pumps, and instant hot water dispensers.</p>
+    <ul class="modal-list">
+      <li>6-year warranty on electric tank heaters</li>
+      <li>Recirculating pumps for instant hot water at the tap</li>
+      <li>Instant dispensers up to 190&deg;F</li>
+      <li>Same-day diagnosis when you've lost hot water</li>
+    </ul>
+    <a href="/contact.html" class="btn btn-copper btn-sm">Schedule this service</a>
+  </template>
+  <template id="svc-drains">
+    <p class="modal-eyebrow">Drain Issues</p>
+    <h3>Drain Cleaning &amp; Repair</h3>
+    <p>Cleaning and clearing for sinks, dishwashers, basins, tubs, showers, toilets, washing machines and floor drains — plus repair or replacement of drain, waste and vent lines.</p>
+    <ul class="modal-list">
+      <li>Machine augering and jetting carried on the truck</li>
+      <li>House and building drain, waste &amp; vent line repair</li>
+      <li>Camera inspection available to find the blockage</li>
+      <li>Preventive maintenance plans for busy kitchens</li>
+    </ul>
+    <a href="/contact.html" class="btn btn-copper btn-sm">Schedule this service</a>
+  </template>
+  <template id="svc-faucets">
+    <p class="modal-eyebrow">Faucet Repair</p>
+    <h3>Faucet &amp; Shower Repair</h3>
+    <p>Repairs for all brands — parts carried on every truck — plus supply of leading faucet and shower brands, backed by manufacturer warranty.</p>
+    <ul class="modal-list">
+      <li>Common repair parts stocked on every vehicle</li>
+      <li>Supply and fit of leading faucet &amp; shower brands</li>
+      <li>Dripping, seized and low-pressure fixtures sorted</li>
+      <li>Manufacturer warranty on supplied units</li>
+    </ul>
+    <a href="/contact.html" class="btn btn-copper btn-sm">Schedule this service</a>
+  </template>
+  <template id="svc-toilets">
+    <p class="modal-eyebrow">Toilets</p>
+    <h3>Toilet Installation &amp; Repair</h3>
+    <p>Low-flow &ldquo;guaranteed flush&rdquo; and standard toilets — P-Trap or S-Trap, American and English brands — with full repair parts.</p>
+    <ul class="modal-list">
+      <li>Low-flow &ldquo;guaranteed flush&rdquo; and standard models</li>
+      <li>P-Trap and S-Trap configurations</li>
+      <li>Repair parts for one-piece, two-piece &amp; English P-Trap sets</li>
+      <li>Running, leaking and blocked toilets fixed fast</li>
+    </ul>
+    <a href="/contact.html" class="btn btn-copper btn-sm">Schedule this service</a>
+  </template>
+  <template id="svc-disposals">
+    <p class="modal-eyebrow">Garbage Disposals</p>
+    <h3>Disposal Installation</h3>
+    <p>Supply and installation of garbage disposals in a range of sizes for residential and commercial kitchens.</p>
+    <ul class="modal-list">
+      <li>Sized for household or commercial kitchen use</li>
+      <li>Correct electrical and drain connections</li>
+      <li>Replacement of failed or jammed units</li>
+      <li>Advice on what not to put down the disposal</li>
+    </ul>
+    <a href="/contact.html" class="btn btn-copper btn-sm">Schedule this service</a>
+  </template>
+  <template id="svc-sewer">
+    <p class="modal-eyebrow">Sewer Problems</p>
+    <h3>Sewer Line Service</h3>
+    <p>Sewer line cleaning for 1&frac12;&Prime; to 10&Prime; lines, video camera inspection with DVD recording, RootX root-killer treatment, and repair or replacement to WASA code.</p>
+    <ul class="modal-list">
+      <li>Cleaning for 1&frac12;&Prime; to 10&Prime; lines</li>
+      <li>Camera inspection with DVD recording</li>
+      <li>RootX root-killer treatment</li>
+      <li>Repair and replacement to WASA code</li>
+    </ul>
+    <a href="/contact.html" class="btn btn-copper btn-sm">Schedule this service</a>
+  </template>
+  <template id="svc-tanks">
+    <p class="modal-eyebrow">Water Problems</p>
+    <h3>Water Tanks &amp; Line Repair</h3>
+    <p>Water tanks sized correctly by our technicians, plus water main and secondary line leak repair and replacement.</p>
+    <ul class="modal-list">
+      <li>Tank sizing matched to your household or building</li>
+      <li>Water main leak detection and repair</li>
+      <li>Secondary line replacement</li>
+      <li>Pressure and supply troubleshooting</li>
+    </ul>
+    <a href="/contact.html" class="btn btn-copper btn-sm">Schedule this service</a>
+  </template>
+  <template id="svc-camera">
+    <p class="modal-eyebrow">Diagnostics</p>
+    <h3>Video Camera Inspection</h3>
+    <p>In-line video survey with DVD recording to pinpoint blockages, breaks and root intrusion — so you fix the right problem the first time.</p>
+    <ul class="modal-list">
+      <li>Recorded survey you keep on DVD</li>
+      <li>Locate blockages, collapses and root intrusion</li>
+      <li>Confirm a repair before you dig or excavate</li>
+      <li>Ideal for pre-purchase and commercial due diligence</li>
+    </ul>
+    <a href="/contact.html" class="btn btn-copper btn-sm">Schedule this service</a>
+  </template>
+  <template id="svc-general">
+    <p class="modal-eyebrow">Approvals &amp; Advice</p>
+    <h3>WASA Approvals &amp; General Repairs</h3>
+    <p>WASA approvals, As-Built drawings, and professional advice from a 25+ year Caribbean plumbing contractor — plus anything else your building needs.</p>
+    <ul class="modal-list">
+      <li>WASA approvals and As-Built drawings</li>
+      <li>Professional sign-off and documentation</li>
+      <li>General plumbing repairs of every kind</li>
+      <li>Advice from a 25+ year contractor</li>
+    </ul>
+    <a href="/contact.html" class="btn btn-copper btn-sm">Schedule this service</a>
+  </template>
+  <template id="svc-burst">
+    <p class="modal-eyebrow">Emergency</p>
+    <h3>Burst Pipes &amp; Leaks</h3>
+    <p>Fast isolation and repair of burst mains and hidden leaks to stop water damage before it spreads — day or night.</p>
+    <ul class="modal-list">
+      <li>Rapid shut-off and make-safe on arrival</li>
+      <li>Leak detection for hidden and slab leaks</li>
+      <li>Permanent repair, not just a patch</li>
+      <li>24/7 emergency hotline: 280-6295</li>
+    </ul>
+    <a href="tel:+18682806295" class="btn btn-copper btn-sm">Call 280-6295</a>
+  </template>
+
   <footer data-include="/partials/footer.html"></footer>
-  <script src="/js/main.js?v=1" defer></script>
-  <script src="/js/widget.js?v=1" defer></script>
+  <script src="/js/main.js?v=11" defer></script>
+  <script src="/js/motion.js?v=11" defer></script>
+  <script src="/js/ui.js?v=11" defer></script>
+  <script src="/js/widget.js?v=11" defer></script>
 </body>
 </html>
