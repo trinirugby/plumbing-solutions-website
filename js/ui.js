@@ -251,8 +251,26 @@
       });
     });
 
-    var initial = tabs.findIndex(function (t) { return t.getAttribute("aria-selected") === "true"; });
+    // Deep link: /services.html#commercial opens that tab (slug or tab id).
+    function indexForHash() {
+      var slug = (window.location.hash || "").replace(/^#/, "");
+      if (!slug) return -1;
+      return tabs.findIndex(function (t) {
+        return t.getAttribute("data-tab-slug") === slug || t.id === slug;
+      });
+    }
+
+    var fromHash = indexForHash();
+    var initial = fromHash > -1
+      ? fromHash
+      : tabs.findIndex(function (t) { return t.getAttribute("aria-selected") === "true"; });
     select(initial < 0 ? 0 : initial);
+    if (fromHash > -1) container.scrollIntoView({ block: "start" });
+
+    window.addEventListener("hashchange", function () {
+      var idx = indexForHash();
+      if (idx > -1) select(idx);
+    });
   }
 
   document.querySelectorAll("[data-tabs]").forEach(initTabs);

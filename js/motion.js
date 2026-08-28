@@ -98,6 +98,66 @@
     counters.forEach(function (el) { cio.observe(el); });
   }
 
+  /* ---------- Logo marquee (brands strip) ----------
+     Authors write ONE .marquee__set in the HTML; this clones it until the
+     track is wide enough to scroll seamlessly, then drives a CSS animation
+     whose distance is exactly one set (so the loop has no visible seam).
+     No JS / reduced motion => the single authored set stays a static row. */
+  try {
+    var marquees = Array.prototype.slice.call(document.querySelectorAll("[data-marquee]"));
+
+    marquees.forEach(function (marquee) {
+      var track = marquee.querySelector(".marquee__track");
+      var master = track && track.querySelector(".marquee__set");
+      if (!track || !master) return;
+      if (reduceMotion) return;                        // stays .is-running-less: static row
+
+      // px/second — data-marquee="34" reads as a slow, premium drift.
+      var speed = parseFloat(marquee.getAttribute("data-marquee"));
+      if (!isFinite(speed) || speed <= 0) speed = 34;
+
+      function layout() {
+        // Drop previous clones, then measure the master set on its own.
+        Array.prototype.slice.call(track.querySelectorAll("[data-marquee-clone]"))
+          .forEach(function (n) { track.removeChild(n); });
+        marquee.classList.remove("is-running");
+
+        var setWidth = master.getBoundingClientRect().width;
+        var viewport = marquee.getBoundingClientRect().width;
+        if (!setWidth || !viewport) return;
+
+        // Need the viewport covered even after translating a full set left.
+        var copies = Math.ceil(viewport / setWidth) + 1;
+        for (var i = 0; i < copies; i++) {
+          var clone = master.cloneNode(true);
+          clone.setAttribute("aria-hidden", "true");
+          clone.setAttribute("data-marquee-clone", "");
+          track.appendChild(clone);
+        }
+
+        track.style.setProperty("--marquee-distance", setWidth + "px");
+        track.style.setProperty("--marquee-duration", (setWidth / speed) + "s");
+        marquee.classList.add("is-running");
+      }
+
+      // Logos are lazy-loaded SVG/PNG — remeasure once they have real widths.
+      var imgs = Array.prototype.slice.call(master.querySelectorAll("img"));
+      var pending = imgs.filter(function (img) { return !img.complete; });
+      pending.forEach(function (img) {
+        img.addEventListener("load", layout, { once: true });
+        img.addEventListener("error", layout, { once: true });
+      });
+
+      layout();
+
+      var resizeTimer = null;
+      window.addEventListener("resize", function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(layout, 180);
+      });
+    });
+  } catch (e) { /* non-fatal — the authored set remains a static row */ }
+
   /* ---------- Video controller (hero + section bands) ---------- */
   try {
     var videos = document.querySelectorAll(".hero__video, .video-band__media video");

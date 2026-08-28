@@ -11,11 +11,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap">
 
-  <link rel="stylesheet" href="/css/base.css?v=11">
-  <link rel="stylesheet" href="/css/motion.css?v=11">
-  <link rel="stylesheet" href="/css/ui.css?v=11">
-  <link rel="stylesheet" href="/css/home.css?v=11">
-  <link rel="stylesheet" href="/css/widget.css?v=11">
+  <link rel="stylesheet" href="/css/base.css?v=12">
+  <link rel="stylesheet" href="/css/motion.css?v=12">
+  <link rel="stylesheet" href="/css/ui.css?v=12">
+  <link rel="stylesheet" href="/css/home.css?v=12">
+  <link rel="stylesheet" href="/css/widget.css?v=12">
   <link rel="icon" href="/assets/images/logo-ps-badge.png" type="image/png">
 </head>
 <body>
@@ -43,12 +43,15 @@
             <span class="kinetic-line">No Job Too Big</span>
             <span class="kinetic-line">or <span class="accent">Small.</span></span>
           </h1>
-          <p class="hero__lead">Residential and commercial plumbing across Trinidad &amp; Tobago
-            — repairs, installations, and everything in between.</p>
+          <p class="hero__lead">Since 1997, we&rsquo;ve approached every job with the same commitment&mdash;quality
+            workmanship, attention to detail and timely, dependable service. From homes and
+            businesses to major projects, we proudly serve Trinidad &amp; Tobago and the Caribbean.</p>
           <div class="hero__actions">
-            <a href="/contact.html" class="btn btn-copper">Schedule a Plumber</a>
-            <a href="/services.html" class="btn btn-outline-white">View Services</a>
+            <a href="/contact.html" class="btn btn-copper">Schedule a Visit</a>
+            <a href="/services.html" class="btn btn-outline-white">Explore Our Services</a>
           </div>
+          <p class="hero__servicelist">Residential <span aria-hidden="true">&middot;</span> Commercial
+            <span aria-hidden="true">&middot;</span> Emergency Services</p>
         </div>
       </div>
     </section>
@@ -65,10 +68,10 @@
             </picture>
           </div>
           <div class="tile__body">
-            <p class="tile__label">Book a Visit</p>
-            <h3>Schedule a Plumber</h3>
-            <p>Residential or commercial — get a uniformed, trained technician dispatched to
-              your job.</p>
+            <p class="tile__label">Need a Plumber?</p>
+            <h3>Schedule a Visit</h3>
+            <p>Professional plumbing service for your home, office or property&mdash;delivered by
+              trained, experienced technicians.</p>
             <a href="/contact.html" class="btn btn-outline btn-sm">Schedule Now</a>
           </div>
         </article>
@@ -76,17 +79,17 @@
         <article class="tile">
           <div class="tile__img-wrap">
             <picture>
-              <source type="image/avif" srcset="/assets/optimized/home-tile-careers-800.avif">
-              <source type="image/webp" srcset="/assets/optimized/home-tile-careers-800.webp">
-              <img src="/assets/optimized/home-tile-careers-800.jpg" alt="Plumbing Solutions crew member in the field" width="800" height="600" loading="lazy" decoding="async">
+              <source type="image/avif" srcset="/assets/optimized/gallery-commercial-2-800.avif">
+              <source type="image/webp" srcset="/assets/optimized/gallery-commercial-2-800.webp">
+              <img src="/assets/optimized/gallery-commercial-2-800.jpg" alt="Plumbing Solutions crew on a commercial construction site" width="800" height="600" loading="lazy" decoding="async">
             </picture>
           </div>
           <div class="tile__body">
-            <p class="tile__label">Join The Team</p>
-            <h3>Plumbers Wanted</h3>
-            <p>We're hiring experienced plumbers and apprentices across Trinidad. Health
-              insurance, uniforms, and paid vacation.</p>
-            <a href="/career.html" class="btn btn-outline btn-sm">See Openings</a>
+            <p class="tile__label">For Businesses &amp; Property Managers</p>
+            <h3>Commercial Plumbing</h3>
+            <p>Reliable plumbing support for commercial properties, offices, facilities and ongoing
+              maintenance needs.</p>
+            <a href="/services.html#commercial" class="btn btn-outline btn-sm">Commercial Services</a>
           </div>
         </article>
 
@@ -99,25 +102,36 @@
             </picture>
           </div>
           <div class="tile__body">
-            <p class="tile__label">Our Work</p>
-            <h3>Recent Projects</h3>
-            <p>From single-family homes to multi-storey commercial builds — browse our
-              project gallery.</p>
-            <a href="/gallery.html" class="btn btn-outline btn-sm">View Gallery</a>
+            <p class="tile__label">Proven Experience</p>
+            <h3>Our Projects</h3>
+            <p>Explore plumbing projects delivered across Trinidad &amp; Tobago and the
+              Caribbean&mdash;from residential developments to major commercial installations.</p>
+            <a href="/gallery.html" class="btn btn-outline btn-sm">View Projects</a>
           </div>
         </article>
       </div>
     </section>
 
     <!-- ─────────── BRANDS ─────────── -->
-    <section class="section--tight">
+    <section class="section--tight brands">
       <div class="container">
-        <p class="brand-strip__title">Brands we install</p>
-        <div class="logo-strip" data-reveal-group="70">
-          <span class="logo-strip__item">Viega</span>
-          <span class="logo-strip__item">Kohler</span>
-          <span class="logo-strip__item">Duravit</span>
-          <span class="logo-strip__item">American Standard</span>
+        <div class="brands__head" data-reveal>
+          <p class="eyebrow">Quality Products. Trusted Brands.</p>
+          <p class="brands__lead">We work with trusted plumbing brands known for quality,
+            performance and reliability.</p>
+        </div>
+      </div>
+
+      <!-- Add a brand: drop one more <li class="marquee__item"> into the set below.
+           The track is cloned to fill the viewport automatically (js/motion.js). -->
+      <div class="marquee brands__marquee" data-marquee="34" data-reveal>
+        <div class="marquee__track">
+          <ul class="marquee__set">
+            <li class="marquee__item"><img class="brand-logo brand-logo--viega" src="/assets/brands/viega.svg" alt="Viega" width="476" height="405" loading="lazy" decoding="async"></li>
+            <li class="marquee__item"><img class="brand-logo brand-logo--kohler" src="/assets/brands/kohler.svg" alt="Kohler" width="448" height="97" loading="lazy" decoding="async"></li>
+            <li class="marquee__item"><img class="brand-logo brand-logo--duravit" src="/assets/brands/duravit.png" alt="Duravit" width="1280" height="242" loading="lazy" decoding="async"></li>
+            <li class="marquee__item"><img class="brand-logo brand-logo--american-standard" src="/assets/brands/american-standard.svg" alt="American Standard" width="501" height="93" loading="lazy" decoding="async"></li>
+          </ul>
         </div>
       </div>
     </section>
@@ -138,9 +152,9 @@
   </main>
 
   <footer data-include="/partials/footer.html"></footer>
-  <script src="/js/main.js?v=11" defer></script>
-  <script src="/js/motion.js?v=11" defer></script>
-  <script src="/js/ui.js?v=11" defer></script>
-  <script src="/js/widget.js?v=11" defer></script>
+  <script src="/js/main.js?v=12" defer></script>
+  <script src="/js/motion.js?v=12" defer></script>
+  <script src="/js/ui.js?v=12" defer></script>
+  <script src="/js/widget.js?v=12" defer></script>
 </body>
 </html>

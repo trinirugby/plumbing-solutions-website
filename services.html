@@ -11,10 +11,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap">
 
-  <link rel="stylesheet" href="/css/base.css?v=11">
-  <link rel="stylesheet" href="/css/motion.css?v=11">
-  <link rel="stylesheet" href="/css/ui.css?v=11">
-  <link rel="stylesheet" href="/css/widget.css?v=11">
+  <link rel="stylesheet" href="/css/base.css?v=12">
+  <link rel="stylesheet" href="/css/motion.css?v=12">
+  <link rel="stylesheet" href="/css/ui.css?v=12">
+  <link rel="stylesheet" href="/css/widget.css?v=12">
   <link rel="icon" href="/assets/images/logo-ps-badge.png" type="image/png">
 </head>
 <body>
@@ -34,9 +34,9 @@
       <div class="container">
         <div data-tabs style="display:flex;flex-direction:column;align-items:center;">
           <div class="tabs__list" role="tablist" aria-label="Service categories">
-            <button class="tabs__tab" role="tab" id="tab-res" aria-controls="panel-res" aria-selected="true">Residential</button>
-            <button class="tabs__tab" role="tab" id="tab-com" aria-controls="panel-com" aria-selected="false" tabindex="-1">Commercial</button>
-            <button class="tabs__tab" role="tab" id="tab-emg" aria-controls="panel-emg" aria-selected="false" tabindex="-1">Emergency</button>
+            <button class="tabs__tab" role="tab" id="tab-res" data-tab-slug="residential" aria-controls="panel-res" aria-selected="true">Residential</button>
+            <button class="tabs__tab" role="tab" id="tab-com" data-tab-slug="commercial" aria-controls="panel-com" aria-selected="false" tabindex="-1">Commercial</button>
+            <button class="tabs__tab" role="tab" id="tab-emg" data-tab-slug="emergency" aria-controls="panel-emg" aria-selected="false" tabindex="-1">Emergency</button>
           </div>
 
           <div class="tabs__panels" style="width:100%;">
@@ -302,9 +302,9 @@
   </template>
 
   <footer data-include="/partials/footer.html"></footer>
-  <script src="/js/main.js?v=11" defer></script>
-  <script src="/js/motion.js?v=11" defer></script>
-  <script src="/js/ui.js?v=11" defer></script>
-  <script src="/js/widget.js?v=11" defer></script>
+  <script src="/js/main.js?v=12" defer></script>
+  <script src="/js/motion.js?v=12" defer></script>
+  <script src="/js/ui.js?v=12" defer></script>
+  <script src="/js/widget.js?v=12" defer></script>
 </body>
 </html>
