@@ -1,5 +1,5 @@
 // Plumbing Solutions — AI customer-service widget backend.
-// Uses the official Anthropic SDK with Claude Haiku 4.5 (chosen for cost
+// Vercel serverless function. Uses the official Anthropic SDK with Claude Haiku 4.5 (chosen for cost
 // efficiency on a public-facing FAQ widget). First-pass, general-info only —
 // deeper config (live scheduling, larger knowledge base) is deferred.
 
@@ -68,20 +68,22 @@ up-to-date immunization, and own basic tools. Point applicants to the Career pag
 
 When you reference a page, you may use a Markdown link like [Contact us](/contact.html).`;
 
-exports.handler = async (event) => {
-  if (event.httpMethod !== 'POST') {
-    return { statusCode: 405, body: JSON.stringify({ error: 'Method not allowed' }) };
+module.exports = async (req, res) => {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  let message, history;
-  try {
-    ({ message, history = [] } = JSON.parse(event.body));
-  } catch {
-    return { statusCode: 400, body: JSON.stringify({ error: 'Invalid request body' }) };
+  let body = req.body;
+  if (typeof body === 'string') {
+    try { body = JSON.parse(body); } catch { body = null; }
+  }
+  if (!body || typeof body !== 'object') {
+    return res.status(400).json({ error: 'Invalid request body' });
   }
 
+  const { message, history = [] } = body;
   if (!message || typeof message !== 'string' || !message.trim()) {
-    return { statusCode: 400, body: JSON.stringify({ error: 'Message is required' }) };
+    return res.status(400).json({ error: 'Message is required' });
   }
 
   // Keep only well-formed prior turns, then cap to the last 8 for context.
@@ -104,20 +106,13 @@ exports.handler = async (event) => {
       response.content.find((b) => b.type === 'text')?.text ??
       "Sorry, I couldn't get a response right now. Please call our office at (868) 628-4646.";
 
-    return {
-      statusCode: 200,
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ reply }),
-    };
+    return res.status(200).json({ reply });
   } catch (err) {
     console.error('Anthropic request failed:', err);
-    return {
-      statusCode: 500,
-      body: JSON.stringify({
-        error: 'Internal server error',
-        reply:
-          "I'm having trouble connecting right now. For anything urgent, call our 24/7 hotline at (868) 280-6295.",
-      }),
-    };
+    return res.status(500).json({
+      error: 'Internal server error',
+      reply:
+        "I'm having trouble connecting right now. For anything urgent, call our 24/7 hotline at (868) 280-6295.",
+    });
   }
 };

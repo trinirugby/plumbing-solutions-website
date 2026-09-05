@@ -85,6 +85,7 @@
           </div>
 
           <div class="contact__form" data-reveal>
+            <!-- TODO: Netlify Forms is dead on Vercel - this form posts nowhere. Wire up a handler (Web3Forms / api endpoint) before relying on it. -->
             <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact.html?success=1" novalidate>
               <input type="hidden" name="form-name" value="contact">
               <p class="form-honey">

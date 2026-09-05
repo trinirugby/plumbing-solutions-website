@@ -20,8 +20,11 @@ yarn-debug.log*
 .superpowers/
 .claude/
 
-# Local Netlify folder
+# Local host folders
 .netlify
+.vercel
 
 # Local screenshot test artifacts
 .screenshots/
+
+.vercel

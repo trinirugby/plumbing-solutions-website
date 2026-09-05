@@ -1,9 +1,9 @@
 /* Floating AI chat widget ("Piper") for Plumbing Solutions.
    Self-bootstrapping: fetches its own partial, injects it, then binds — so it
-   doesn't race the async partial loading in main.js. Talks to the Netlify
-   function at /.netlify/functions/chat. */
+   doesn't race the async partial loading in main.js. Talks to the Vercel
+   function at /api/chat. */
 (function () {
-  const CHAT_URL = '/.netlify/functions/chat';
+  const CHAT_URL = '/api/chat';
   const PARTIAL_URL = '/partials/chat-widget.html';
 
   function boot() {
