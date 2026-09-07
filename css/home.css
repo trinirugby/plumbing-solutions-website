@@ -17,7 +17,6 @@
 .tile__img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--dur-slow) var(--ease-out); }
 .tile:hover .tile__img-wrap img { transform: scale(1.06); }
 .tile__body { padding: 1.6rem 1.7rem 1.85rem; }
-.tile__label { font-family: var(--font-mono); font-size: 0.68rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--coral-ink); margin-bottom: 0.5rem; }
 .tile__body h3 { margin-bottom: 0.6rem; }
 .tile__body p { font-size: 0.95rem; margin-bottom: 1.1rem; color: var(--muted); }
 

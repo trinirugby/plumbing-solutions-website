@@ -382,6 +382,10 @@ body > header { position: sticky; top: 0; z-index: 60; }
 .card-bracket h3 { margin-bottom: 0.6rem; font-size: 1.3rem; }
 .card-bracket p { font-size: 0.96rem; color: var(--stone-ink); line-height: 1.65; }
 .card-bracket__icon { width: 40px; height: 40px; margin-bottom: 1rem; color: var(--bronze); }
+/* Card kicker. Lives here, not home.css — services.html and products.html use it too. */
+.tile__label { font-family: var(--font-mono); font-size: 0.68rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--coral-ink); margin-bottom: 0.5rem; }
+/* Whole card is a link (emergency services) */
+.card-bracket--link { display: block; color: inherit; text-decoration: none; }
 
 .badge {
   display: inline-flex; align-items: center; gap: 0.4rem;
