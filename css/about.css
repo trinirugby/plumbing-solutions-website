@@ -1,3 +1,4 @@
+/* Sticky section nav — used by tips.html */
 .subnav {
   position: sticky;
   top: 62px;
@@ -17,39 +18,122 @@
 }
 .subnav__link:hover { color: var(--copper); }
 
-.client-list, .project-list {
-  columns: 1;
-  gap: 2rem;
-}
-@media (min-width: 700px) { .client-list, .project-list { columns: 2; } }
-.client-list li, .project-list li {
-  break-inside: avoid;
-  padding: 0.55rem 0;
-  border-bottom: 1px solid var(--steel-200);
-  font-size: 0.9375rem;
-  color: var(--steel-700);
-}
-/* On the dark espresso steel section, use light text for contrast */
-.section--steel .client-list li,
-.section--steel .project-list li {
-  color: #C4B8A6;
-  border-bottom-color: rgba(244, 239, 230, 0.14);
+/* ---------- Story intro ---------- */
+.story-intro {
+  max-width: 68ch;
+  font-size: 1.08rem;
+  color: var(--stone-ink);
+  margin: 0 auto clamp(3rem, 6vw, 4.5rem);
+  text-align: center;
 }
 
-.guarantee-grid { display: grid; gap: 1.5rem; }
-@media (min-width: 700px) { .guarantee-grid { grid-template-columns: repeat(2, 1fr); } }
-.guarantee-item { display: flex; gap: 0.9rem; align-items: flex-start; }
-.guarantee-item__mark {
-  flex-shrink: 0;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: var(--turq);
-  color: var(--sea-deep);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* ---------- Alternating timeline ----------
+   One rail; items sit left/right of it on desktop, all to the right of it on
+   mobile. The dot is 9px + a 3px ring = 15px, so it centres on the rail at
+   half its own width. */
+.timeline--alt {
+  position: relative;
+  max-width: 940px;
+  margin-inline: auto;
+  padding-left: 0;
+  border-left: 0;
+  gap: 0;
+}
+.timeline--alt::before {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  left: 7.5px;
+  width: 1px;
+  background: var(--line);
+}
+.timeline--alt .timeline__item {
+  position: relative;
+  padding: 1rem 0 1rem 2.75rem;
+}
+.timeline--alt .timeline__item::before { left: 0; top: 1.45rem; }
+
+@media (min-width: 900px) {
+  .timeline--alt::before { left: 50%; }
+  .timeline--alt .timeline__item {
+    width: 50%;
+    padding: 1.6rem 3rem 1.6rem 0;
+    text-align: right;
+  }
+  .timeline--alt .timeline__item:nth-child(even) {
+    margin-left: 50%;
+    padding: 1.6rem 0 1.6rem 3rem;
+    text-align: left;
+  }
+  .timeline--alt .timeline__item::before { left: auto; right: -7.5px; top: 2.05rem; }
+  .timeline--alt .timeline__item:nth-child(even)::before { right: auto; left: -7.5px; }
+}
+
+/* ---------- What sets us apart ---------- */
+.apart__head { max-width: 68ch; }
+.apart-grid { display: grid; gap: 1.5rem; }
+@media (min-width: 760px) { .apart-grid { grid-template-columns: repeat(2, 1fr); gap: 1.75rem; } }
+.apart-card {
+  background: rgba(243, 240, 230, 0.05);
+  border: 1px solid rgba(243, 240, 230, 0.14);
+  border-radius: var(--radius-md);
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+  transition: border-color var(--dur-base) ease, background-color var(--dur-base) ease;
+}
+.apart-card:hover { border-color: var(--bronze-light); background: rgba(243, 240, 230, 0.08); }
+.apart-card__num {
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--bronze-light);
+  margin-bottom: 1rem;
+}
+.apart-card h3 { font-size: 1.35rem; margin-bottom: 0.6rem; }
+
+/* ---------- The people ---------- */
+.people__photo { display: block; align-self: start; }
+.people__photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+.people-grid { margin-top: clamp(2.5rem, 5vw, 3.5rem); }
+.people-item { border-top: 2px solid var(--royal); padding-top: 1.25rem; }
+.people-item h3 { font-size: 1.2rem; margin-bottom: 0.55rem; }
+.people-item p { font-size: 0.96rem; color: var(--stone-ink); line-height: 1.65; }
+
+/* ---------- Industry affiliations ---------- */
+.affiliations__head { max-width: 68ch; }
+
+/* ---------- Closing ---------- */
+.closing { max-width: 74ch; }
+.closing p { margin-bottom: 1rem; }
+.closing__cta-title { margin-top: 2.25rem; margin-bottom: 0.65rem; }
+.closing__cta { margin-top: 0.75rem; }
+
+/* Wider hero box — the About headline is a full sentence. */
+.page-hero--wide .page-hero__content { max-width: 940px; }
+
+/* Affiliation name plates. Swap a <span> for an <img class="brand-logo"> when an
+   official logo is available; the marquee doesn't care which it is. */
+.affiliations__marquee { margin-top: clamp(1.75rem, 3vw, 2.5rem); }
+.affil-plate {
+  display: block;
+  white-space: nowrap;
   font-family: var(--font-mono);
-  font-size: 0.8125rem;
-  font-weight: 700;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--stone-ink);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1.4rem;
+  background: var(--cloud);
 }

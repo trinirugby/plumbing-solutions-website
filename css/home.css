@@ -71,68 +71,12 @@
 .brands__lead { margin: 0; color: var(--muted); font-size: 1rem; }
 .brands__marquee { margin-top: clamp(1.75rem, 3vw, 2.5rem); }
 
-.marquee {
-  --marquee-gap: clamp(2.75rem, 6vw, 5.5rem);
-  position: relative;
-  overflow: hidden;
-}
-/* Soft edges only once the track is actually scrolling. */
-.marquee.is-running {
-  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
-          mask-image: linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
-}
-.marquee__track { display: flex; width: max-content; }
-.marquee__set {
-  display: flex;
-  flex: none;
-  align-items: center;
-  gap: var(--marquee-gap);
-  padding: 0 var(--marquee-gap) 0 0;  /* trailing gap keeps the loop seam even */
-  margin: 0;
-  list-style: none;
-}
-.marquee__item { display: flex; flex: none; align-items: center; }
-
-.marquee.is-running .marquee__track {
-  animation: marquee-scroll var(--marquee-duration, 40s) linear infinite;
-  will-change: transform;
-}
-.marquee.is-running:hover .marquee__track,
-.marquee.is-running:focus-within .marquee__track { animation-play-state: paused; }
-
-@keyframes marquee-scroll {
-  from { transform: translate3d(0, 0, 0); }
-  to   { transform: translate3d(calc(-1 * var(--marquee-distance, 0px)), 0, 0); }
-}
-
-/* Fail-safe: no JS, or reduced motion — a plain centred row. */
-.marquee:not(.is-running) { padding-inline: clamp(1.25rem, 4vw, 2.25rem); }
-.marquee:not(.is-running) .marquee__track { width: 100%; animation: none; }
-.marquee:not(.is-running) .marquee__set {
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-  padding-right: 0;
-  gap: clamp(1.75rem, 4vw, 3rem) var(--marquee-gap);
-}
-@media (prefers-reduced-motion: reduce) {
-  .marquee .marquee__track { animation: none; }
-}
-
-.brand-logo {
-  display: block;
-  height: var(--logo-h, 30px);
-  width: auto;
-  max-width: none;
-  opacity: 0.92;
-}
 .brand-logo--viega             { --logo-h: 40px; }   /* block mark, not a wordmark */
 .brand-logo--kohler            { --logo-h: 26px; }
 .brand-logo--duravit           { --logo-h: 28px; }
 .brand-logo--american-standard { --logo-h: 34px; }   /* script: small cap-height */
 
 @media (max-width: 640px) {
-  .marquee { --marquee-gap: 2.5rem; }
   .brand-logo--viega { --logo-h: 33px; }
   .brand-logo--kohler { --logo-h: 21px; }
   .brand-logo--duravit { --logo-h: 23px; }
