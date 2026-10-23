@@ -230,3 +230,9 @@ body.modal-open { overflow: hidden; }
 @media (max-width: 640px) {
   .marquee { --marquee-gap: 2.5rem; }
 }
+
+/* Phones: one row, three equal segments — the wrapping pill looked broken */
+@media (max-width: 620px) {
+  .tabs__list { display: grid; grid-template-columns: repeat(3, 1fr); width: 100%; gap: 0.25rem; padding: 0.3rem; }
+  .tabs__tab { padding: 0.8rem 0.25rem; font-size: 0.6875rem; letter-spacing: 0.02em; }
+}

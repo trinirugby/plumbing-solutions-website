@@ -153,3 +153,11 @@
 @media (prefers-reduced-motion: reduce) {
   .chat-window, .chat-toggle, .chat-toggle__icon, .chat-typing span { transition: none; animation: none; }
 }
+
+/* Phones: smaller bubble tucked into the corner so it covers less copy */
+@media (max-width: 620px) {
+  .chat-widget { right: 0.85rem; bottom: max(0.85rem, env(safe-area-inset-bottom)); }
+  .chat-toggle { width: 50px; height: 50px; }
+  .chat-toggle__icon { width: 22px; height: 22px; }
+  .chat-window { bottom: 62px; }
+}

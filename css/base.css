@@ -473,3 +473,16 @@ fieldset legend { font-family: var(--font-mono); font-size: 0.72rem; font-weight
 .mx-auto { margin-inline: auto; }
 .mt-lg { margin-top: 2.5rem; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---------- Phone polish ---------- */
+.footer__bottom p { color: inherit; }   /* the global p colour made the copyright dark-on-dark */
+@media (max-width: 799px) {
+  .footer__links { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem 1.5rem; }
+}
+@media (max-width: 620px) {
+  /* iOS zooms the page on focus when a field's text is under 16px */
+  .form-group input, .form-group select, .form-group textarea { font-size: 1rem; }
+}
+@media (max-width: 520px) {
+  .hero__actions .btn, .final-cta__actions .btn { flex: 1 1 100%; }
+}

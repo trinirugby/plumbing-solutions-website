@@ -9,3 +9,4 @@
 .contact__map iframe { width: 100%; height: 320px; border: 0; display: block; }
 .contact__photo-wrap { margin-top: 2rem; border-radius: var(--radius-md); overflow: hidden; }
 .contact__photo-wrap img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+@media (max-width: 939px) { .contact__photo-wrap { display: none; } }   /* phones: get to the form sooner */
