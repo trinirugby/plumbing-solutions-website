@@ -251,8 +251,9 @@ body > header { position: sticky; top: 0; z-index: 60; }
 .nav.is-scrolled .nav__inner { padding-block: 0.7rem; }
 .nav__brand {
   display: inline-flex;
-  align-items: center;
-  gap: 0.65rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
   font-family: var(--font-display);
   font-weight: 800;
   font-size: 1.32rem;
@@ -263,9 +264,8 @@ body > header { position: sticky; top: 0; z-index: 60; }
 }
 .nav__badge { width: 42px; height: auto; flex: none; transition: width var(--dur-base) var(--ease-standard); }
 .nav.is-scrolled .nav__badge { width: 36px; }
-.nav__wordmark { line-height: 1; }
+.nav__wordmark { line-height: 1; font-size: 0.8rem; white-space: nowrap; }
 .nav__wordmark em { color: var(--bronze-ink); font-style: normal; }
-@media (max-width: 420px) { .nav__wordmark { display: none; } }
 .nav__links { display: none; gap: 1.4rem; align-items: center; }
 .nav__link {
   font-family: var(--font-mono);

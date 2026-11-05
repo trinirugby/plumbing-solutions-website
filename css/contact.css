@@ -10,3 +10,8 @@
 .contact__photo-wrap { margin-top: 2rem; border-radius: var(--radius-md); overflow: hidden; }
 .contact__photo-wrap img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
 @media (max-width: 939px) { .contact__photo-wrap { display: none; } }   /* phones: get to the form sooner */
+/* clear the sticky nav when arriving via /contact.html#contact-form */
+#contact-form { scroll-margin-top: 7rem; }
+/* label column + number column so the numbers line up */
+.contact__phone-row { display: grid; grid-template-columns: 8.5rem 1fr; column-gap: 0.75rem; }
+@media (max-width: 400px) { .contact__phone-row { grid-template-columns: 1fr; margin-bottom: 0.4rem; } }

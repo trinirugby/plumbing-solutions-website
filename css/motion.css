@@ -178,3 +178,5 @@
   html.js .float-slow { animation: float-slow 7s ease-in-out infinite; }
 }
 @keyframes float-slow { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+/* portrait phones crop the 16:9 clip to its left edge (a blurry pipe) — centre on the faucet head */
+@media (max-width: 700px) { .hero__video { object-position: 62% center; } }

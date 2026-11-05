@@ -17,6 +17,9 @@
     .then(markActiveLink)
     .then(setupGauge)
     .then(function () {
+      // the injected nav shifts the page after the browser's own #hash jump — redo it
+      const target = location.hash && document.getElementById(location.hash.slice(1));
+      if (target) target.scrollIntoView();
       document.dispatchEvent(new CustomEvent("partials:ready"));
     });
 
