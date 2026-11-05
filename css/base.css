@@ -334,7 +334,23 @@ body > header { position: sticky; top: 0; z-index: 60; }
 .footer__brand { font-family: var(--font-display); font-weight: 800; font-size: 1.45rem; letter-spacing: -0.01em; color: var(--bone); line-height: 1; }
 .footer__brand span { color: var(--bronze-light); }
 .footer__tagline { margin-top: 1rem; max-width: 34ch; color: #A7ACC0; font-size: 0.96rem; }
-.footer__member { margin-top: 1.25rem; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.02em; color: #757C94; max-width: 40ch; }
+.footer__trust { margin-top: 1.25rem; }
+/* "Licensed & Insured" pill — hero + footer */
+.trust-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bronze-light);
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+}
+.trust-pill svg { width: 15px; height: 15px; flex: none; }
 .footer__col-title { font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.16em; color: var(--bronze-light); margin-bottom: 1rem; }
 .footer__links { display: flex; flex-direction: column; gap: 0.6rem; }
 .footer__link { color: #A7ACC0; font-size: 0.96rem; transition: color var(--dur-fast) ease; }

@@ -84,7 +84,12 @@ can safely do so, turn off the water at the main valve while they wait.
   storage tanks), Bradford White (water heaters), Cla-Val (automatic control valves for
   waterworks, fire protection, commercial/industrial use), Halsey Taylor (drinking fountains,
   water coolers, hydration stations for commercial and public spaces).
-- Brands they install (shown on the homepage): Viega, Kohler, Duravit, American Standard.
+- Authorised distributor (retail and wholesale) for leading brands. Sanitary ware, faucets and
+  fittings: American Standard, Duravit, TOTO, Kohler, Decolav, MR Direct, QM Drain, Aquamoon.
+  Plumbing systems and equipment: Viega, Zurn, Bradley, Cla-Val, LASCO Fittings, Shurjoint.
+- Designer showroom: the Bath & Kitchen Design Centre at #41 Mucurapo Road, St. James (opened
+  2003) — customers can see and compare sanitary ware, faucets and fittings in person. Showroom
+  hours are not in these notes: tell them to call (868) 628-4646.
 - Products are quality and warrantied, with professional installation and after-sales support.
 - For buying products, availability or pricing: call the office at (868) 628-4646.
 
@@ -96,8 +101,16 @@ can safely do so, turn off the water at the main valve while they wait.
   T&T in 2012; today a regional plumbing partner for homes, businesses and major projects.
 - Technicians are trained and experienced, arrive prepared, communicate clearly and respect
   your property, backed by the wider office and project team.
-- Industry memberships: Subcontractors Association of T&T, T&T Contractors Association,
-  Plumbers Association of T&T, World Plumbing Council, Chamber of Commerce.
+- Licensed and insured, 29+ years in business (since 1997). Two Licensed Sanitary Constructors
+  on staff; in-house plumbing design department handles W.A.S.A. approvals, isometrics, shop
+  and as-built drawings.
+- Clients include Beacon, EY, PwC, Sagicor, Farfan, PCC, Microsoft, UDeCOTT, NIPDEC, Caribbean
+  Chemicals and the Office of the Prime Minister.
+- Major projects include The Renaissance at Shorelands, BIR Tower, the Parliament relocation to
+  the Waterfront, C3 Centre, SouthPark, Couva Health Centre, Sagicor Head Office (San Fernando),
+  Five Islands Water Park, Trincity Village Centre, and in Grenada: Spice Island Beach Resort,
+  St. George's University dorms, Scotiabank/RBC/Republic Bank head offices. Full list on the
+  [Gallery page](/gallery.html).
 - Approach: quality products, professional workmanship, solutions they stand behind —
   same care from a leaking faucet to a major commercial development.
 
