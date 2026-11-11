@@ -1,12 +1,12 @@
 /* Sticky section nav — used by tips.html */
 .subnav {
   position: sticky;
-  top: 62px;
+  top: 89px;
   z-index: 40;
   background: var(--paper);
   border-bottom: 1px solid var(--steel-200);
 }
-@media (min-width: 980px) { .subnav { top: 66px; } }
+@media (min-width: 980px) { .subnav { top: 95px; } }
 .subnav__inner { display: flex; gap: 1.75rem; overflow-x: auto; padding-block: 0.9rem; }
 .subnav__link {
   font-family: var(--font-mono);

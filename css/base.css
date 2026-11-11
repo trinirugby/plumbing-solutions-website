@@ -262,9 +262,20 @@ body > header { position: sticky; top: 0; z-index: 60; }
   flex-shrink: 0;
   line-height: 1;
 }
-.nav__badge { width: 42px; height: auto; flex: none; transition: width var(--dur-base) var(--ease-standard); }
-.nav.is-scrolled .nav__badge { width: 36px; }
-.nav__wordmark { line-height: 1; font-size: 0.8rem; white-space: nowrap; }
+/* Client asked (11 Nov) for a bigger, clearer logo: badge + name centred
+   under it, like their business card. */
+.nav__brand { align-items: center; }
+.nav__badge { width: 54px; height: auto; flex: none; transition: width var(--dur-base) var(--ease-standard); }
+.nav.is-scrolled .nav__badge { width: 44px; }
+.nav__wordmark { line-height: 1; font-size: 0.95rem; white-space: nowrap; transition: font-size var(--dur-base) var(--ease-standard); }
+.nav.is-scrolled .nav__wordmark { font-size: 0.85rem; }
+@media (min-width: 980px) {
+  .nav__inner { padding-block: 0.8rem; }
+  .nav__badge { width: 68px; }
+  .nav.is-scrolled .nav__badge { width: 50px; }
+  .nav__wordmark { font-size: 1.08rem; }
+  .nav.is-scrolled .nav__wordmark { font-size: 0.92rem; }
+}
 .nav__wordmark em { color: var(--bronze-ink); font-style: normal; }
 .nav__links { display: none; gap: 1.4rem; align-items: center; }
 .nav__link {
