@@ -329,9 +329,12 @@ body > header { position: sticky; top: 0; z-index: 60; }
 .nav__mobile .nav__emergency { padding-block: 0.85rem; font-size: 0.85rem; color: var(--bronze-ink); font-weight: 700; }
 .nav__mobile .btn { margin-top: 0.75rem; }
 
-@media (min-width: 980px) {
-  .nav__links { display: flex; }
-  .nav__cta { display: flex; }
+/* Desktop nav needs ~1230px (logo + 8 links + office/emergency numbers + button),
+   so it gets a wider container and only shows from 1340px; below that the hamburger menu carries both numbers. */
+.nav .container { max-width: 1400px; }
+@media (min-width: 1340px) {
+  .nav__links { display: flex; gap: 1rem; }
+  .nav__cta { display: flex; gap: 1rem; }
   .nav__hamburger { display: none; }
   .nav__mobile { display: none !important; }
 }
