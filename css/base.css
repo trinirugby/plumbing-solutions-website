@@ -304,6 +304,12 @@ body > header { position: sticky; top: 0; z-index: 60; }
 .nav__cta { display: none; align-items: center; gap: 1.25rem; }
 .nav__emergency { display: flex; flex-direction: column; line-height: 1.15; font-family: var(--font-mono); }
 .nav__emergency-label { font-size: 0.58rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--stone-ink); }
+.nav__phones { display: flex; flex-direction: column; gap: 0.2rem; line-height: 1.15; font-family: var(--font-mono); }
+.nav__phone { font-size: 0.95rem; font-weight: 700; color: var(--bronze-ink); white-space: nowrap; }
+.nav__phone:hover { color: var(--bronze-dark); }
+.nav__logo { height: 62px; width: auto; display: block; transition: height var(--dur-base) var(--ease-standard); }
+.nav.is-scrolled .nav__logo { height: 50px; }
+@media (max-width: 480px) { .nav__logo { height: 46px; } .nav.is-scrolled .nav__logo { height: 42px; } }
 .nav__emergency-number { font-size: 0.95rem; font-weight: 700; color: var(--bronze-ink); white-space: nowrap; }
 
 .nav__hamburger {
@@ -342,11 +348,13 @@ body > header { position: sticky; top: 0; z-index: 60; }
 /* ---------- Footer ---------- */
 .footer__wrapper { background: var(--ink); color: #A7ACC0; padding-block: 4.5rem 2rem; }
 .footer__top { display: grid; gap: 2.75rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(243,240,230,0.12); }
-@media (min-width: 800px) { .footer__top { grid-template-columns: 1.6fr 1fr 1fr; } }
+@media (min-width: 800px) { .footer__top { grid-template-columns: 1.1fr 0.7fr 1.9fr; } }
 .footer__brand-lockup { display: inline-flex; align-items: center; gap: 0.75rem; }
 .footer__badge { width: 46px; height: auto; flex: none; }
 .footer__brand { font-family: var(--font-display); font-weight: 800; font-size: 1.45rem; letter-spacing: -0.01em; color: var(--bone); line-height: 1; }
 .footer__brand span { color: var(--bronze-light); }
+.footer__brand { display: inline-block; }
+.footer__logo { width: 260px; max-width: 100%; height: auto; display: block; }
 .footer__tagline { margin-top: 1rem; max-width: 34ch; color: #A7ACC0; font-size: 0.96rem; }
 .footer__trust { margin-top: 1.25rem; }
 /* "Licensed & Insured" pill — hero + footer */
@@ -371,6 +379,11 @@ body > header { position: sticky; top: 0; z-index: 60; }
 .footer__link:hover { color: #fff; }
 .footer__contact-line { color: #A7ACC0; font-size: 0.96rem; margin-bottom: 0.5rem; }
 .footer__contact-line strong { color: var(--bone); font-weight: 600; }
+.footer__phones { display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem; margin-bottom: 0.9rem; }
+.footer__phone { display: flex; flex-direction: column; gap: 0.15rem; margin: 0; font-size: 0.96rem; font-weight: 600; color: var(--bone); white-space: nowrap; }
+.footer__phone a, .footer__phone-num { color: var(--bone); font-weight: 600; transition: color var(--dur-fast) ease; }
+.footer__phone a:hover { color: #fff; text-decoration: underline; }
+.footer__phone-label { font-family: var(--font-mono); font-size: 0.66rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.14em; color: var(--bronze-light); }
 .footer__cta { margin-top: 1.25rem; }
 .footer__bottom { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; padding-top: 1.75rem; font-family: var(--font-mono); font-size: 0.75rem; color: #757C94; }
 .footer__legal-links { display: flex; gap: 1.25rem; }

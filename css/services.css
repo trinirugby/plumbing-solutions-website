@@ -1,0 +1,16 @@
+/* Services page: alternating photo/text rows (mirrors .product-row in products.css) */
+.svc-list { display: grid; gap: clamp(2.5rem, 5vw, 4rem); }
+.svc-row { display: grid; gap: 1.5rem; align-items: center; }
+@media (min-width: 820px) {
+  .svc-row { grid-template-columns: 1fr 1fr; gap: 3rem; }
+  .svc-row--reverse .svc-row__media { order: 2; }
+  .svc-row--reverse .svc-row__text { order: 1; }
+}
+.svc-row__media, .svc-row__text { min-width: 0; }
+.svc-row__media { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); }
+.svc-row__media > picture img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+.svc-row__note { font-weight: 500; color: var(--ink); }
+.svc-row__text .btn { margin-top: 0.5rem; }
+.svc-ridgid { position: relative; margin: 0; background: var(--ink); }
+.svc-ridgid img { display: block; width: 100%; height: auto; aspect-ratio: 1280 / 590; object-fit: cover; }
+.svc-ridgid figcaption { position: absolute; left: 0.9rem; bottom: 0.7rem; color: #fff; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; }

@@ -64,7 +64,8 @@
 .brand-tile__logo--cla-val,
 .brand-tile__logo--aquamoon,
 .brand-tile__logo--qm-drain { height: 54px; }
-.brand-tile__logo--viega { height: 46px; }
+.brand-tile a { display: grid; place-items: center; width: 100%; }
+.brand-tile a:hover .brand-tile__logo { opacity: 0.75; }
 
 /* ---------- Designer showroom ---------- */
 .showroom__inner { display: grid; gap: 2.5rem; align-items: center; }

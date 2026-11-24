@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>if('IntersectionObserver'in window)document.documentElement.classList.add('js')</script>
   <title>Contact | Plumbing Solutions</title>
-  <meta name="description" content="Reach Plumbing Solutions at #41 Mucurapo Road, St. James, Trinidad — office (868) 628-4646/4648, 24/7 emergency hotline (868) 280-6295, or send an enquiry.">
+  <meta name="description" content="Reach Plumbing Solutions at #41 Mucurapo Road, St. James, Trinidad — office (868) 628-4646 / (868) 628-4648, 24/7 emergency hotline (868) 280-6295, or send an enquiry.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="/css/ui.css?v=14">
   <link rel="stylesheet" href="/css/contact.css?v=14">
   <link rel="stylesheet" href="/css/widget.css?v=14">
-  <link rel="icon" href="/assets/images/logo-ps-badge-v2.png" type="image/png">
+  <link rel="icon" href="/assets/images/logo-ps-horizontal.png" type="image/png">
 </head>
 <body>
   <header data-include="/partials/nav.html"></header>
@@ -48,7 +48,7 @@
               <div>
                 <div class="contact__detail-label">Phone</div>
                 <div class="contact__detail-value">
-                  <div class="contact__phone-row"><strong>Office</strong> <a href="tel:+18686284646">(868)&nbsp;628&#8209;4646 / 4648</a></div>
+                  <div class="contact__phone-row"><strong>Office</strong> <a href="tel:+18686284646">(868)&nbsp;628&#8209;4646</a> / <a href="tel:+18686284648">(868)&nbsp;628&#8209;4648</a></div>
                   <div class="contact__phone-row"><strong>Emergency (24/7)</strong> <a href="tel:+18682806295">(868)&nbsp;280&#8209;6295</a></div>
                   <div class="contact__phone-row"><strong>Fax</strong> <span>(868)&nbsp;628&#8209;6876</span></div>
                 </div>
@@ -180,7 +180,8 @@
           '— Sent from the website contact form'
         ].filter(function (line) { return line !== null; }).join('\n');
 
-        window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(text), '_blank');
+        var waUrl = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(text);
+        if (!window.open(waUrl, '_blank')) location.href = waUrl;
 
         var b = document.getElementById('contact-success');
         if (b) {

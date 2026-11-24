@@ -20,12 +20,22 @@
 
 /* ---------- Story intro ---------- */
 .story-intro {
-  max-width: 68ch;
-  font-size: 1.08rem;
-  color: var(--stone-ink);
+  max-width: 72ch;
   margin: 0 auto clamp(3rem, 6vw, 4.5rem);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
   text-align: center;
+  background: var(--cloud);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--bronze);
+  border-radius: var(--radius-md);
 }
+.story-intro__title { font-size: clamp(1.5rem, 3vw, 2rem); margin: 0 0 0.9rem; }
+.story-intro p { margin: 0; font-size: 1.08rem; font-weight: 600; line-height: 1.7; color: var(--warm-text); }
+
+/* About hero: a little more air around the title and blurb */
+.page-hero--wide { padding-block: 7rem 5.5rem; }
+.page-hero--wide .page-hero__lead { max-width: 64ch; margin-top: 1.5rem; line-height: 1.75; }
+@media (max-width: 640px) { .page-hero--wide { padding-block: 5.5rem 4rem; } }
 
 /* ---------- Alternating timeline ----------
    One rail; items sit left/right of it on desktop, all to the right of it on

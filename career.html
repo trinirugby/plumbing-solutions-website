@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>if('IntersectionObserver'in window)document.documentElement.classList.add('js')</script>
   <title>Career | Plumbing Solutions</title>
-  <meta name="description" content="Join Plumbing Solutions — health insurance, national holidays, paid vacation, and uniforms provided. Email your CV for plumber and apprentice positions in Trinidad &amp; Tobago.">
+  <meta name="description" content="Build your career with Plumbing Solutions. Sagicor health insurance, public holidays, paid vacation and company uniforms. Apply online for plumbing roles in Trinidad &amp; Tobago.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,69 +14,322 @@
   <link rel="stylesheet" href="/css/base.css?v=18">
   <link rel="stylesheet" href="/css/motion.css?v=13">
   <link rel="stylesheet" href="/css/ui.css?v=14">
+  <link rel="stylesheet" href="/css/about.css?v=16">
   <link rel="stylesheet" href="/css/widget.css?v=14">
-  <link rel="icon" href="/assets/images/logo-ps-badge-v2.png" type="image/png">
+  <link rel="stylesheet" href="/css/career.css?v=1">
+  <link rel="icon" href="/assets/images/logo-ps-horizontal.png" type="image/png">
 </head>
 <body>
   <header data-include="/partials/nav.html"></header>
 
   <main>
-    <section class="page-hero">
+    <!-- ─────────── CAREERS INTRO ─────────── -->
+    <section class="page-hero career-hero">
       <div class="container page-hero__content">
         <p class="eyebrow">Careers</p>
-        <h1 class="page-hero__title">Join a Crew That's Been at This Since 1997</h1>
-        <p class="page-hero__lead">We're always looking for experienced plumbers and
-          apprentices across Trinidad &amp; Tobago.</p>
+        <h1 class="page-hero__title">Build your career with Plumbing Solutions</h1>
+        <p class="page-hero__lead">Our team handles everything from everyday repairs to major commercial installations. If you take pride in your work, communicate clearly and treat customers' property with care, we'd like to hear from you.</p>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container grid-2" style="align-items:start;" data-reveal-group="90">
-        <div>
-          <p class="eyebrow">Why Work Here</p>
-          <h2>Benefits</h2>
-          <div class="divider"></div>
-          <div class="grid-2" style="gap:1.25rem;">
-            <div class="card-bracket"><h4>Sagicor Health Insurance</h4></div>
-            <div class="card-bracket"><h4>National Holidays</h4></div>
-            <div class="card-bracket"><h4>Paid Vacation</h4></div>
-            <div class="card-bracket"><h4>Uniforms Provided</h4></div>
-          </div>
-
-          <p class="eyebrow" style="margin-top:3rem;">What You'll Need</p>
-          <h2>Employment Conditions</h2>
-          <div class="divider"></div>
-          <ul style="display:flex; flex-direction:column; gap:0.75rem;">
-            <li>Active Republic Bank account</li>
-            <li>Up-to-date immunization</li>
-            <li>Own basic tools, including hack blades</li>
+    <!-- ─────────── EMPLOYEE BENEFITS ─────────── -->
+    <section class="section career-benefits" aria-labelledby="benefits-title">
+      <div class="container">
+        <div class="story-intro career-benefits__box" data-reveal>
+          <h2 class="story-intro__title" id="benefits-title">Employee Benefits</h2>
+          <ul class="benefit-list">
+            <li>Sagicor health insurance</li>
+            <li>Public holidays</li>
+            <li>Paid vacation</li>
+            <li>Company-provided uniforms</li>
           </ul>
         </div>
-
-        <picture style="display:block;">
-          <source type="image/avif" srcset="/assets/optimized/career-fleet-1600.avif 1600w, /assets/optimized/career-fleet-800.avif 800w" sizes="(max-width: 768px) 100vw, 45vw">
-          <source type="image/webp" srcset="/assets/optimized/career-fleet-1600.webp 1600w, /assets/optimized/career-fleet-800.webp 800w" sizes="(max-width: 768px) 100vw, 45vw">
-          <img src="/assets/optimized/career-fleet-1600.jpg" alt="Plumbing Solutions crew and service fleet — placeholder photography" width="1600" height="1067" loading="lazy" decoding="async" style="border-radius:var(--radius-md);">
-        </picture>
       </div>
     </section>
 
-    <!-- ─────────── HOW TO APPLY ─────────── -->
-    <section id="apply" class="section section--dark">
-      <div class="container" data-reveal style="max-width: 760px;">
-        <p class="eyebrow">Apply Now</p>
-        <h2>How to Apply</h2>
-        <div class="divider"></div>
-        <p>Email your CV to <a href="mailto:EMAIL_NEEDED?subject=Job%20Application" style="color: var(--bone); font-weight: 600;">EMAIL_NEEDED</a>. Include the position you're applying for, your plumbing experience, your expected salary, when you can start, and two references.</p>
-        <p>Questions about a role? Call our office on <a href="tel:+18686284646" style="color: var(--bone); font-weight: 600;">(868) 628-4646</a>, Monday to Friday, 8 am–4 pm.</p>
-        <div style="margin-top: 2rem;">
-          <a href="mailto:EMAIL_NEEDED?subject=Job%20Application" class="btn btn-brass">Email Your CV</a>
+    <!-- ─────────── JOB APPLICATION FORM ─────────── -->
+    <section id="apply" class="section career-apply" aria-labelledby="apply-title">
+      <div class="container career-apply__inner">
+        <div id="career-success" class="banner banner--success" role="status" style="display:none; margin-bottom:2rem;">
+          WhatsApp has opened in a new tab with your application ready to send. Press send there and we'll be in touch if there's a fit. If nothing opened, your browser may have blocked the pop-up: message or call us on <a href="tel:+18686284646">(868) 628-4646</a>.
         </div>
+
+        <p class="eyebrow">Apply Now</p>
+        <h2 id="apply-title">Job Application Form</h2>
+        <div class="divider"></div>
+        <p class="career-note"><strong>Before you apply:</strong> Please make sure the information you give is accurate. Applicants need an active Republic Bank account and up-to-date immunisations.</p>
+
+        <!-- Submits to WhatsApp (see script below). No backend: builds a pre-filled message and opens wa.me. Required fields are enforced natively. -->
+        <form id="career-form" class="career__form" name="career-application">
+          <p class="form-honey">
+            <label>Don't fill this out if you're human: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+          </p>
+
+          <fieldset>
+            <legend>Personal and contact information</legend>
+            <div class="form-row form-row--2">
+              <div class="form-group">
+                <label for="position">Position applying for <span class="req" aria-hidden="true">*</span></label>
+                <select id="position" name="position" required>
+                  <option value="">Select a position</option>
+                  <option>Licensed Plumber</option>
+                  <option>Plumber's Assistant</option>
+                  <option>Apprentice</option>
+                  <option>Maintenance Technician</option>
+                  <option>Office / Administrative</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="expectedSalary">Expected salary (TTD, monthly)</label>
+                <input id="expectedSalary" name="expectedSalary" type="text" inputmode="decimal" placeholder="e.g. $6,000">
+              </div>
+            </div>
+
+            <div class="form-row form-row--2">
+              <div class="form-group">
+                <label for="fullName">Full name <span class="req" aria-hidden="true">*</span></label>
+                <input id="fullName" name="fullName" type="text" required autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender">
+                  <option value="">Select</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                  <option>Prefer not to say</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row form-row--2">
+              <div class="form-group">
+                <label for="email">Email address</label>
+                <input id="email" name="email" type="email" autocomplete="email">
+              </div>
+              <div class="form-group">
+                <label for="phone">Telephone number <span class="req" aria-hidden="true">*</span></label>
+                <input id="phone" name="phone" type="tel" required autocomplete="tel" placeholder="(868) 555-0123">
+              </div>
+            </div>
+
+            <div class="form-row form-row--2">
+              <div class="form-group">
+                <label for="address">Residential address <span class="req" aria-hidden="true">*</span></label>
+                <input id="address" name="address" type="text" required autocomplete="street-address">
+              </div>
+              <div class="form-group">
+                <label for="mailingAddress">Mailing address, if different <span class="opt">(optional)</span></label>
+                <input id="mailingAddress" name="mailingAddress" type="text">
+              </div>
+            </div>
+
+            <div class="form-row form-row--2">
+              <div class="form-group">
+                <label for="age">Age</label>
+                <input id="age" name="age" type="number" min="16" max="80" inputmode="numeric">
+              </div>
+              <div class="form-group">
+                <label for="dob">Date of birth</label>
+                <input id="dob" name="dob" type="date">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="idType">Identification type</label>
+              <select id="idType" name="idType">
+                <option value="">Select</option>
+                <option>Electoral ID</option>
+                <option>Driver's Permit</option>
+                <option>Passport</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Driver's permit and bank account</legend>
+
+            <fieldset class="yn">
+              <legend>Do you have a valid driver's permit? <span class="req" aria-hidden="true">*</span></legend>
+              <div class="radio-group">
+                <label class="radio-option"><input type="radio" name="permit" value="Yes" required aria-controls="permit-date-wrap" aria-expanded="false"> Yes</label>
+                <label class="radio-option"><input type="radio" name="permit" value="No" required aria-controls="permit-date-wrap" aria-expanded="false"> No</label>
+              </div>
+            </fieldset>
+            <div class="form-group career-reveal" id="permit-date-wrap" hidden>
+              <label for="permitDate">Permit issue date</label>
+              <input id="permitDate" name="permitDate" type="date" disabled>
+            </div>
+
+            <fieldset class="yn">
+              <legend>Do you have an active Republic Bank account? <span class="req" aria-hidden="true">*</span></legend>
+              <div class="radio-group">
+                <label class="radio-option"><input type="radio" name="bank" value="Yes" required> Yes</label>
+                <label class="radio-option"><input type="radio" name="bank" value="No" required> No</label>
+              </div>
+            </fieldset>
+
+            <!-- "Do you have your own tools?" (Yes / No) goes here once management approves the question. Not shown yet. -->
+          </fieldset>
+
+          <fieldset>
+            <legend>Plumbing experience and availability</legend>
+
+            <fieldset class="yn">
+              <legend>Do you have plumbing experience? <span class="req" aria-hidden="true">*</span></legend>
+              <div class="radio-group">
+                <label class="radio-option"><input type="radio" name="experience" value="Yes" required aria-controls="years-wrap" aria-expanded="false"> Yes</label>
+                <label class="radio-option"><input type="radio" name="experience" value="No" required aria-controls="years-wrap" aria-expanded="false"> No</label>
+              </div>
+            </fieldset>
+            <div class="form-group career-reveal" id="years-wrap" hidden>
+              <label for="years">How many years of plumbing experience do you have?</label>
+              <input id="years" name="years" type="number" min="0" max="60" step="0.5" inputmode="decimal" disabled>
+            </div>
+
+            <div class="form-group">
+              <label for="q1">1. Tell us about your most recent relevant job, apprenticeship or independent work. <span class="opt">(optional)</span></label>
+              <p class="form-hint" id="q1-hint">Include where you worked, how long you were there and what you were responsible for. If you're new to the trade, describe any hands-on experience or skills you'd bring to the role.</p>
+              <textarea id="q1" name="q1" aria-describedby="q1-hint"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="q2">2. What types of plumbing work have you done, and which can you handle independently? <span class="opt">(optional)</span></label>
+              <p class="form-hint" id="q2-hint">For example leak repairs, fixtures, drains and sewers, pumps and tanks, water heaters and commercial installations.</p>
+              <textarea id="q2" name="q2" aria-describedby="q2-hint"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="q3">3. Describe one job or project you worked on. <span class="opt">(optional)</span></label>
+              <p class="form-hint" id="q3-hint">What needed to be done, what did you personally handle and how did it turn out?</p>
+              <textarea id="q3" name="q3" aria-describedby="q3-hint"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="q4">4. What relevant training, trade certificates or qualifications do you have? <span class="opt">(optional)</span></label>
+              <textarea id="q4" name="q4"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="q5">5. When can you start, and are there any days or hours you're unavailable to work? <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="q5" name="q5" required></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>References <span class="opt">(optional)</span></legend>
+            <div class="form-row form-row--2">
+              <div class="form-group">
+                <label for="reference1">Reference 1 (name &amp; contact)</label>
+                <input id="reference1" name="reference1" type="text">
+              </div>
+              <div class="form-group">
+                <label for="reference2">Reference 2 (name &amp; contact)</label>
+                <input id="reference2" name="reference2" type="text">
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="form-submit">
+            <button type="submit" class="btn btn-copper">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.74-.86-2.01-.96-.27-.1-.47-.15-.66.15-.2.29-.76.95-.93 1.15-.17.2-.34.22-.63.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.65-2.05-.17-.29-.02-.45.13-.6.13-.13.3-.35.44-.52.15-.17.2-.29.3-.49.1-.2.05-.37-.02-.52-.08-.15-.66-1.6-.91-2.19-.24-.57-.48-.5-.66-.5l-.57-.01c-.2 0-.52.07-.79.37-.27.29-1.04 1.01-1.04 2.47s1.06 2.86 1.21 3.06c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.74-.71 1.99-1.4.24-.69.24-1.28.17-1.4-.07-.12-.27-.2-.56-.34zM12.05 21.8h-.02a9.8 9.8 0 0 1-4.99-1.37l-.36-.21-3.71.97.99-3.62-.23-.37a9.78 9.78 0 0 1-1.5-5.22c0-5.4 4.4-9.8 9.82-9.8 2.62 0 5.08 1.02 6.93 2.88a9.74 9.74 0 0 1 2.87 6.93c0 5.4-4.4 9.81-9.8 9.81zM20.520 3.45A11.72 11.72 0 0 0 12.05 0C5.6 0 .35 5.25.35 11.7c0 2.06.54 4.08 1.56 5.86L.25 24l6.59-1.73a11.68 11.68 0 0 0 5.21 1.25h.01c6.45 0 11.7-5.25 11.7-11.7 0-3.13-1.22-6.07-3.43-8.28z"/></svg>
+              Send application via WhatsApp
+            </button>
+            <p class="form-hint" style="margin-top:0.75rem;">Opens WhatsApp with your application ready to send. Prefer to call? <a href="tel:+18686284646">(868) 628-4646</a>.</p>
+          </div>
+        </form>
       </div>
     </section>
   </main>
 
   <footer data-include="/partials/footer.html"></footer>
+
+  <script>
+    // Career form -> WhatsApp, same pattern as contact.html: builds a labelled message from the
+    // filled fields and opens wa.me (app on mobile, web.whatsapp.com on desktop).
+    (function () {
+      var WHATSAPP = '18686284646'; // office line, (868) 628-4646
+      var form = document.getElementById('career-form');
+      if (!form) return;
+
+      // Conditional reveal: Yes shows and enables the dependent field; otherwise hide and disable it.
+      function wire(group, wrapId) {
+        var wrap = document.getElementById(wrapId);
+        var radios = form.querySelectorAll('input[name="' + group + '"]');
+        function sync() {
+          var yes = form.elements[group].value === 'Yes';
+          wrap.hidden = !yes;
+          wrap.querySelector('input').disabled = !yes;
+          Array.prototype.forEach.call(radios, function (r) { r.setAttribute('aria-expanded', String(yes)); });
+        }
+        Array.prototype.forEach.call(radios, function (r) { r.addEventListener('change', sync); });
+        sync();
+      }
+      wire('permit', 'permit-date-wrap');
+      wire('experience', 'years-wrap');
+
+      function val(name) {
+        var f = form.elements[name];
+        return f && !f.disabled ? (f.value || '').trim() : '';
+      }
+      function fmtDate(v) { var p = v.split('-'); return p.length === 3 ? p[2] + '/' + p[1] + '/' + p[0] : v; }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (form.elements['bot-field'].value) return; // honeypot: silently drop bots
+
+        var blocks = [
+          ['APPLICATION', [
+            ['Position', val('position')],
+            ['Expected salary (TTD/month)', val('expectedSalary')]
+          ]],
+          ['PERSONAL & CONTACT', [
+            ['Full name', val('fullName')],
+            ['Gender', val('gender')],
+            ['Telephone', val('phone')],
+            ['Email', val('email')],
+            ['Residential address', val('address')],
+            ['Mailing address', val('mailingAddress')],
+            ['Age', val('age')],
+            ['Date of birth', val('dob') && fmtDate(val('dob'))],
+            ['ID type', val('idType')]
+          ]],
+          ['PERMIT & BANK', [
+            ["Valid driver's permit", val('permit')],
+            ['Permit issue date', val('permitDate') && fmtDate(val('permitDate'))],
+            ['Active Republic Bank account', val('bank')]
+          ]],
+          ['EXPERIENCE & AVAILABILITY', [
+            ['Plumbing experience', val('experience')],
+            ['Years of experience', val('years')],
+            ['Most recent relevant work', val('q1')],
+            ['Plumbing work done / can handle independently', val('q2')],
+            ['Job or project described', val('q3')],
+            ['Training, certificates, qualifications', val('q4')],
+            ['Start date / unavailable times', val('q5')]
+          ]],
+          ['REFERENCES', [
+            ['Reference 1', val('reference1')],
+            ['Reference 2', val('reference2')]
+          ]]
+        ];
+
+        var lines = ['Hi Plumbing Solutions, I would like to apply for a position.'];
+        blocks.forEach(function (b) {
+          var rows = b[1].filter(function (r) { return r[1]; });
+          if (!rows.length) return;
+          lines.push('', '*' + b[0] + '*');
+          rows.forEach(function (r) { lines.push(r[0] + ': ' + r[1]); });
+        });
+        lines.push('', '— Sent from the website careers form');
+
+        var waUrl = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(lines.join('\n'));
+        if (!window.open(waUrl, '_blank')) location.href = waUrl;
+
+        var b = document.getElementById('career-success');
+        if (b) {
+          b.style.display = 'block';
+          b.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      });
+    })();
+  </script>
   <script src="/js/main.js?v=13" defer></script>
   <script src="/js/motion.js?v=12" defer></script>
   <script src="/js/ui.js?v=12" defer></script>

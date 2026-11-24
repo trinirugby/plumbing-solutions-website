@@ -89,5 +89,18 @@
 .project-list ul { margin: 0; padding-left: 1.1rem; }
 .project-list li { margin-bottom: 0.4rem; }
 @media (max-width: 699px) { .gallery-grid .gallery-label { font-size: 0.7rem; padding: 1.5rem 0.6rem 0.5rem; } }
+/* name + location tiles for projects without a photo */
+.gallery-grid figure.gallery-tile {
+  aspect-ratio: 4 / 3;
+  display: flex; flex-direction: column; justify-content: flex-end; gap: 0.35rem;
+  padding: 1.1rem;
+  background: linear-gradient(150deg, var(--sea-deep, #14263f), #1f3a5c);
+  border-color: transparent; cursor: default; color: #fff;
+}
+.gallery-grid figure.gallery-tile::after { display: none; }
+.gallery-tile__name { font-weight: 700; font-size: 1.05rem; line-height: 1.25; }
+.gallery-tile__loc { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.72); }
+.gallery-subhead { margin: 2rem 0 1rem; font-family: var(--font-mono); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--bronze-ink); }
+@media (max-width: 699px) { .gallery-tile__name { font-size: 0.85rem; } .gallery-grid figure.gallery-tile { padding: 0.8rem; } }
 .project-list ul { list-style: disc; }
 .project-list li::marker { color: var(--bronze-ink); }
