@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="/css/motion.css?v=13">
   <link rel="stylesheet" href="/css/ui.css?v=14">
   <link rel="stylesheet" href="/css/widget.css?v=14">
-  <link rel="stylesheet" href="/css/services.css?v=1">
+  <link rel="stylesheet" href="/css/services.css?v=2">
   <link rel="icon" href="/assets/images/logo-ps-horizontal.png" type="image/png">
 </head>
 <body>
@@ -122,42 +122,96 @@
 
             <!-- Commercial -->
             <div class="tabs__panel" role="tabpanel" id="panel-com" aria-labelledby="tab-com" hidden>
-              <div class="grid-3">
-                <article class="card-bracket has-modal" data-modal-target="#svc-com-plumbing" tabindex="0" role="button" aria-haspopup="dialog">
+              <div class="svc-list">
+                <article class="svc-row">
+                  <div class="svc-row__media">
+                  <picture>
+                    <source type="image/avif" srcset="/assets/optimized/services-commercial-plumbing-1600.avif 1600w, /assets/optimized/services-commercial-plumbing-800.avif 800w" sizes="(max-width: 820px) 100vw, 50vw">
+                    <source type="image/webp" srcset="/assets/optimized/services-commercial-plumbing-1600.webp 1600w, /assets/optimized/services-commercial-plumbing-800.webp 800w" sizes="(max-width: 820px) 100vw, 50vw">
+                    <img src="/assets/optimized/services-commercial-plumbing-1600.jpg" alt="Commercial washroom with a row of sinks and toilet stalls" width="1600" height="900" loading="lazy" decoding="async">
+                  </picture>
+                  </div>
+                  <div class="svc-row__text">
                   <p class="tile__label">Commercial Plumbing</p>
                   <h3>Commercial Plumbing</h3>
                   <p>Plumbing installations, repairs and re-piping for commercial properties and developments, including water lines, drain, waste and vent systems, and commercial fixtures.</p>
-                  <span class="card-more">View Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                  <button type="button" class="btn btn-copper btn-sm" data-modal-target="#svc-com-plumbing" aria-haspopup="dialog">View Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+                  </div>
                 </article>
-                <article class="card-bracket has-modal" data-modal-target="#svc-com-water" tabindex="0" role="button" aria-haspopup="dialog">
+                <article class="svc-row svc-row--reverse">
+                  <div class="svc-row__media">
+                  <picture>
+                    <source type="image/avif" srcset="/assets/optimized/services-commercial-water-pump-1600.avif 1600w, /assets/optimized/services-commercial-water-pump-800.avif 800w" sizes="(max-width: 820px) 100vw, 50vw">
+                    <source type="image/webp" srcset="/assets/optimized/services-commercial-water-pump-1600.webp 1600w, /assets/optimized/services-commercial-water-pump-800.webp 800w" sizes="(max-width: 820px) 100vw, 50vw">
+                    <img src="/assets/optimized/services-commercial-water-pump-1600.jpg" alt="Commercial booster pump package with pressure tank and control panel" width="1600" height="900" loading="lazy" decoding="async">
+                  </picture>
+                  </div>
+                  <div class="svc-row__text">
                   <p class="tile__label">Water &amp; Pump Systems</p>
                   <h3>Commercial Water &amp; Pump Systems</h3>
                   <p>Installation, repair and replacement of commercial pump systems, booster and transfer pumps, water tanks and related water supply systems.</p>
-                  <span class="card-more">View Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                  <button type="button" class="btn btn-copper btn-sm" data-modal-target="#svc-com-water" aria-haspopup="dialog">View Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+                  </div>
                 </article>
-                <article class="card-bracket has-modal" data-modal-target="#svc-com-hotwater" tabindex="0" role="button" aria-haspopup="dialog">
+                <article class="svc-row">
+                  <div class="svc-row__media">
+                  <picture>
+                    <source type="image/avif" srcset="/assets/optimized/services-commercial-hot-water-1600.avif 1600w, /assets/optimized/services-commercial-hot-water-800.avif 800w" sizes="(max-width: 820px) 100vw, 50vw">
+                    <source type="image/webp" srcset="/assets/optimized/services-commercial-hot-water-1600.webp 1600w, /assets/optimized/services-commercial-hot-water-800.webp 800w" sizes="(max-width: 820px) 100vw, 50vw">
+                    <img src="/assets/optimized/services-commercial-hot-water-1600.jpg" alt="Two commercial water heaters with recirculation pipework and expansion tank" width="1600" height="900" loading="lazy" decoding="async">
+                  </picture>
+                  </div>
+                  <div class="svc-row__text">
                   <p class="tile__label">Hot Water Systems</p>
                   <h3>Commercial Hot Water Systems</h3>
                   <p>Installation, repair and replacement of commercial water heaters and hot water recirculation systems designed to support the demands of commercial properties and facilities.</p>
-                  <span class="card-more">View Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                  <button type="button" class="btn btn-copper btn-sm" data-modal-target="#svc-com-hotwater" aria-haspopup="dialog">View Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+                  </div>
                 </article>
-                <article class="card-bracket has-modal" data-modal-target="#svc-com-drains" tabindex="0" role="button" aria-haspopup="dialog">
+                <article class="svc-row svc-row--reverse">
+                  <div class="svc-row__media">
+                  <picture>
+                    <source type="image/avif" srcset="/assets/optimized/services-commercial-drain-sewer-1600.avif 1600w, /assets/optimized/services-commercial-drain-sewer-800.avif 800w" sizes="(max-width: 820px) 100vw, 50vw">
+                    <source type="image/webp" srcset="/assets/optimized/services-commercial-drain-sewer-1600.webp 1600w, /assets/optimized/services-commercial-drain-sewer-800.webp 800w" sizes="(max-width: 820px) 100vw, 50vw">
+                    <img src="/assets/optimized/services-commercial-drain-sewer-1600.jpg" alt="Plumber clearing a commercial yard drain with a drain-cleaning machine" width="1600" height="900" loading="lazy" decoding="async">
+                  </picture>
+                  </div>
+                  <div class="svc-row__text">
                   <p class="tile__label">Drains &amp; Sewers</p>
                   <h3>Commercial Drain &amp; Sewer Services</h3>
                   <p>Professional drain and sewer cleaning, video inspections, RootX treatment and sewer repairs for commercial properties and developments.</p>
-                  <span class="card-more">View Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                  <button type="button" class="btn btn-copper btn-sm" data-modal-target="#svc-com-drains" aria-haspopup="dialog">View Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+                  </div>
                 </article>
-                <article class="card-bracket has-modal" data-modal-target="#svc-com-design" tabindex="0" role="button" aria-haspopup="dialog">
+                <article class="svc-row">
+                  <div class="svc-row__media">
+                  <picture>
+                    <source type="image/avif" srcset="/assets/optimized/services-commercial-wasa-approvals-1600.avif 1600w, /assets/optimized/services-commercial-wasa-approvals-800.avif 800w" sizes="(max-width: 820px) 100vw, 50vw">
+                    <source type="image/webp" srcset="/assets/optimized/services-commercial-wasa-approvals-1600.webp 1600w, /assets/optimized/services-commercial-wasa-approvals-800.webp 800w" sizes="(max-width: 820px) 100vw, 50vw">
+                    <img src="/assets/optimized/services-commercial-wasa-approvals-1600.jpg" alt="Plumbing design drawings being marked up beside a laptop" width="1600" height="900" loading="lazy" decoding="async">
+                  </picture>
+                  </div>
+                  <div class="svc-row__text">
                   <p class="tile__label">Design, Approvals &amp; Documentation</p>
                   <h3>Design &amp; WASA Approvals</h3>
                   <p>WASA approvals, plumbing designs, shop drawings, As-Built drawings and related technical documentation for plumbing projects and developments.</p>
-                  <span class="card-more">View Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                  <button type="button" class="btn btn-copper btn-sm" data-modal-target="#svc-com-design" aria-haspopup="dialog">View Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+                  </div>
                 </article>
-                <article class="card-bracket has-modal" data-modal-target="#svc-com-support" tabindex="0" role="button" aria-haspopup="dialog">
+                <article class="svc-row svc-row--reverse">
+                  <div class="svc-row__media">
+                  <picture>
+                    <source type="image/avif" srcset="/assets/optimized/services-commercial-inspection-1600.avif 1600w, /assets/optimized/services-commercial-inspection-800.avif 800w" sizes="(max-width: 820px) 100vw, 50vw">
+                    <source type="image/webp" srcset="/assets/optimized/services-commercial-inspection-1600.webp 1600w, /assets/optimized/services-commercial-inspection-800.webp 800w" sizes="(max-width: 820px) 100vw, 50vw">
+                    <img src="/assets/optimized/services-commercial-inspection-1600.jpg" alt="Plumber checking pipework gauges with a tablet during a site inspection" width="1600" height="900" loading="lazy" decoding="async">
+                  </picture>
+                  </div>
+                  <div class="svc-row__text">
                   <p class="tile__label">Property &amp; Facility Support</p>
                   <h3>Plumbing Maintenance &amp; Support</h3>
                   <p>Scheduled site visits, routine plumbing checks, preventative maintenance and ongoing plumbing support for property managers, commercial properties and facilities.</p>
-                  <span class="card-more">View Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                  <button type="button" class="btn btn-copper btn-sm" data-modal-target="#svc-com-support" aria-haspopup="dialog">View Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+                  </div>
                 </article>
               </div>
             </div>

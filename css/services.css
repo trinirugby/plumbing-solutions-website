@@ -14,3 +14,5 @@
 .svc-ridgid { position: relative; margin: 0; background: var(--ink); }
 .svc-ridgid img { display: block; width: 100%; height: auto; aspect-ratio: 1280 / 590; object-fit: cover; }
 .svc-ridgid figcaption { position: absolute; left: 0.9rem; bottom: 0.7rem; color: #fff; font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; }
+/* Commercial photos are 16:9 and must show the whole system (pump package incl. control panel) */
+#panel-com .svc-row__media > picture img { aspect-ratio: 16 / 9; }
