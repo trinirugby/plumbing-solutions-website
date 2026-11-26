@@ -88,7 +88,7 @@ can safely do so, turn off the water at the main valve while they wait.
   water coolers, hydration stations for commercial and public spaces).
 - Authorised distributor (retail and wholesale) for leading brands. Sanitary ware, faucets and
   fittings: American Standard, Duravit, TOTO, Kohler, Decolav, MR Direct, QM Drain, Aquamoon.
-  Plumbing systems and equipment: Viega, Zurn, Bradley, Cla-Val, LASCO Fittings, Shurjoint.
+  Plumbing systems and equipment: Zurn, Bradley, Cla-Val, LASCO Fittings, Shurjoint, Spire.
 - Designer showroom: the Bath & Kitchen Design Centre at #41 Mucurapo Road, St. James (opened
   2003) — customers can see and compare sanitary ware, faucets and fittings in person. Showroom
   hours are not in these notes: tell them to call (868) 628-4646.
@@ -143,7 +143,7 @@ More on the [Tips & Advice page](/tips.html).
 
 ## Site pages (use these paths when linking)
 Home /index.html · Services /services.html · Products /products.html · About /about.html ·
-Gallery /gallery.html (residential, commercial and refurbishment projects, plus Viega team
+Gallery /gallery.html (residential, commercial and refurbishment projects, plus team
 training) · Tips & Advice /tips.html · Career /career.html · Contact /contact.html
 
 ## Style & guardrails

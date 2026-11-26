@@ -72,13 +72,11 @@
 .brands__lead { margin: 0; color: var(--muted); font-size: 1rem; }
 .brands__marquee { margin-top: clamp(1.75rem, 3vw, 2.5rem); }
 
-.brand-logo--viega             { --logo-h: 40px; }   /* block mark, not a wordmark */
 .brand-logo--kohler            { --logo-h: 26px; }
 .brand-logo--duravit           { --logo-h: 28px; }
 .brand-logo--american-standard { --logo-h: 34px; }   /* script: small cap-height */
 
 @media (max-width: 640px) {
-  .brand-logo--viega { --logo-h: 33px; }
   .brand-logo--kohler { --logo-h: 21px; }
   .brand-logo--duravit { --logo-h: 23px; }
   .brand-logo--american-standard { --logo-h: 28px; }
